@@ -1,0 +1,181 @@
+[04-Jun-2018 16:38:43 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /home/webtycoons/public_html/dawakhana/inc/functions.php:53
+Stack trace:
+#0 /home/webtycoons/public_html/dawakhana/inc/functions.php(2572): database->connection()
+#1 /home/webtycoons/public_html/dawakhana/index.php(2): include_once('/home/webtycoon...')
+#2 {main}
+  thrown in /home/webtycoons/public_html/dawakhana/inc/functions.php on line 53
+[05-Jun-2018 17:44:17 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/dawakhana/inc/functions.php on line 6
+[06-Jun-2018 11:49:47 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/dawakhana/inc/functions.php on line 6
+[06-Jun-2018 18:32:42 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/dawakhana/inc/functions.php on line 6
+[07-Jun-2018 11:27:47 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/dawakhana/inc/functions.php on line 6
+[08-Jun-2018 14:37:48 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/dawakhana/inc/functions.php on line 6
+[09-Jun-2018 13:23:54 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/dawakhana/inc/functions.php on line 6
+[09-Jun-2018 13:24:39 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/dawakhana/inc/functions.php on line 6
+[09-Jun-2018 13:46:14 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/dawakhana/inc/functions.php on line 6
+[09-Jun-2018 13:46:34 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/dawakhana/inc/functions.php on line 6
+[09-Jun-2018 13:47:03 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/dawakhana/inc/functions.php on line 6
+[09-Jun-2018 13:47:16 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/dawakhana/inc/functions.php on line 6
+[09-Jun-2018 13:49:50 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/dawakhana/inc/functions.php on line 6
+[12-Jun-2018 12:20:34 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/dawakhana/inc/functions.php on line 6
+[14-Jun-2018 13:08:44 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 89
+[14-Jun-2018 13:08:44 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 219
+[14-Jun-2018 13:08:44 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 133
+[14-Jun-2018 13:08:44 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 81
+[14-Jun-2018 13:08:44 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 85
+[14-Jun-2018 13:08:44 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 173
+[14-Jun-2018 13:08:44 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 219
+[14-Jun-2018 13:08:44 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 215
+[14-Jun-2018 13:08:44 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 219
+[14-Jun-2018 13:08:44 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 257
+[14-Jun-2018 13:08:44 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 81
+[14-Jun-2018 13:08:44 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 85
+[14-Jun-2018 13:08:44 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 299
+[14-Jun-2018 13:08:44 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 81
+[14-Jun-2018 13:08:44 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 85
+[15-Jun-2018 16:40:49 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 89
+[15-Jun-2018 16:40:49 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 219
+[15-Jun-2018 16:40:49 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 133
+[15-Jun-2018 16:40:49 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 81
+[15-Jun-2018 16:40:49 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 85
+[15-Jun-2018 16:40:49 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 173
+[15-Jun-2018 16:40:49 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 219
+[15-Jun-2018 16:40:49 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 215
+[15-Jun-2018 16:40:49 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 219
+[15-Jun-2018 16:40:49 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 257
+[15-Jun-2018 16:40:49 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 81
+[15-Jun-2018 16:40:49 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 85
+[15-Jun-2018 16:40:49 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 299
+[15-Jun-2018 16:40:49 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 81
+[15-Jun-2018 16:40:49 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 85
+[16-Jun-2018 09:10:22 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list.php on line 42
+[16-Jun-2018 09:10:43 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list.php on line 42
+[16-Jun-2018 09:11:15 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list.php on line 42
+[16-Jun-2018 09:11:33 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list.php on line 42
+[16-Jun-2018 09:17:08 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list.php on line 324
+[16-Jun-2018 09:17:16 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list.php on line 324
+[16-Jun-2018 09:17:17 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list.php on line 324
+[16-Jun-2018 09:17:30 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list.php on line 324
+[16-Jun-2018 09:17:41 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list.php on line 324
+[16-Jun-2018 09:18:13 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list_my.php on line 324
+[16-Jun-2018 09:18:18 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list_my.php on line 324
+[16-Jun-2018 09:18:37 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list_my.php on line 324
+[16-Jun-2018 09:19:31 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list_my.php on line 326
+[16-Jun-2018 09:19:33 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list_my.php on line 326
+[16-Jun-2018 09:20:23 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list_my.php on line 325
+[16-Jun-2018 09:37:21 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list_my.php on line 285
+[16-Jun-2018 09:39:03 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list_my.php on line 45
+[16-Jun-2018 09:39:11 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list_my.php on line 45
+[16-Jun-2018 09:39:19 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list_my.php on line 45
+[16-Jun-2018 09:39:49 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list_my.php on line 45
+[16-Jun-2018 09:39:59 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list_my.php on line 45
+[16-Jun-2018 09:40:13 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list_my.php on line 45
+[16-Jun-2018 12:24:09 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list.php on line 324
+[16-Jun-2018 12:50:26 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list.php on line 324
+[16-Jun-2018 12:52:05 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list.php on line 324
+[16-Jun-2018 12:52:08 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list.php on line 324
+[16-Jun-2018 12:53:31 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/webtycoons/public_html/medkart/orders_list.php on line 324
+[16-Jun-2018 13:18:31 UTC] PHP Parse error:  syntax error, unexpected '$key' (T_VARIABLE) in /home/webtycoons/public_html/medkart/orders_list.php on line 353
+[16-Jun-2018 13:18:34 UTC] PHP Parse error:  syntax error, unexpected '$key' (T_VARIABLE) in /home/webtycoons/public_html/medkart/orders_list.php on line 353
+[18-Jun-2018 10:53:50 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 89
+[18-Jun-2018 10:53:50 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 219
+[18-Jun-2018 10:53:50 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 133
+[18-Jun-2018 10:53:50 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 81
+[18-Jun-2018 10:53:50 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 85
+[18-Jun-2018 10:53:50 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 173
+[18-Jun-2018 10:53:50 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 219
+[18-Jun-2018 10:53:50 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 215
+[18-Jun-2018 10:53:50 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 219
+[18-Jun-2018 10:53:50 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 257
+[18-Jun-2018 10:53:50 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 81
+[18-Jun-2018 10:53:50 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 85
+[18-Jun-2018 10:53:50 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 299
+[18-Jun-2018 10:53:50 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 81
+[18-Jun-2018 10:53:50 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 85
+[18-Jun-2018 11:27:47 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 53
+[18-Jun-2018 11:27:47 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 219
+[18-Jun-2018 11:27:47 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 81
+[18-Jun-2018 11:27:47 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 85
+[18-Jun-2018 11:27:47 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 219
+[18-Jun-2018 11:27:47 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 219
+[18-Jun-2018 11:27:47 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 81
+[18-Jun-2018 11:27:47 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 85
+[18-Jun-2018 11:27:47 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 81
+[18-Jun-2018 11:27:47 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 85
+[19-Jun-2018 22:51:22 UTC] PHP Warning:  phpinfo(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/webtycoons/public_html/medkart/info.php on line 2
+[19-Jun-2018 23:11:17 UTC] PHP Warning:  phpinfo(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/webtycoons/public_html/medkart/info.php on line 2
+[20-Jun-2018 05:39:32 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 89
+[20-Jun-2018 05:39:32 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 219
+[20-Jun-2018 05:39:32 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 133
+[20-Jun-2018 05:39:32 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 81
+[20-Jun-2018 05:39:32 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 85
+[20-Jun-2018 05:39:32 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 173
+[20-Jun-2018 05:39:32 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 219
+[20-Jun-2018 05:39:32 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 215
+[20-Jun-2018 05:39:32 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 219
+[20-Jun-2018 05:39:32 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 257
+[20-Jun-2018 05:39:32 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 81
+[20-Jun-2018 05:39:32 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 85
+[20-Jun-2018 05:39:32 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 299
+[20-Jun-2018 05:39:32 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 81
+[20-Jun-2018 05:39:32 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 85
+[20-Jun-2018 06:30:45 UTC] PHP Fatal error:  Class 'App\Category' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/PageController.php on line 16
+[20-Jun-2018 06:34:43 UTC] PHP Fatal error:  Class 'App\Category' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/PageController.php on line 16
+[20-Jun-2018 06:42:37 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Slider' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/PageController.php on line 17
+[20-Jun-2018 06:43:13 UTC] PHP Fatal error:  Class 'App\Slider' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/PageController.php on line 17
+[20-Jun-2018 06:43:52 UTC] PHP Fatal error:  Class 'App\Slider' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/PageController.php on line 17
+[20-Jun-2018 06:49:23 UTC] PHP Fatal error:  Class 'App\Slider' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/PageController.php on line 17
+[20-Jun-2018 06:51:11 UTC] PHP Fatal error:  Class 'App\Slider' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/PageController.php on line 17
+[20-Jun-2018 06:52:05 UTC] PHP Fatal error:  Class 'App\Slider' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/PageController.php on line 18
+[20-Jun-2018 06:52:12 UTC] PHP Fatal error:  Class 'App\Slider' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/PageController.php on line 18
+[20-Jun-2018 06:54:12 UTC] PHP Fatal error:  Class 'App\Slider' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/PageController.php on line 19
+[20-Jun-2018 06:59:31 UTC] PHP Fatal error:  Class 'App\Flight' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/PageController.php on line 27
+[20-Jun-2018 07:01:25 UTC] PHP Fatal error:  Class 'App\Flight' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/PageController.php on line 28
+[20-Jun-2018 07:15:39 UTC] PHP Fatal error:  Class 'App\Flight' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/PageController.php on line 28
+[20-Jun-2018 07:18:35 UTC] PHP Fatal error:  Class 'App\Flight' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/PageController.php on line 28
+[20-Jun-2018 13:22:50 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/medkart/inc/functions.php on line 6
+[20-Jun-2018 13:23:31 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/medkart/inc/functions.php on line 6
+[20-Jun-2018 13:25:05 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/medkart/inc/functions.php on line 6
+[20-Jun-2018 13:36:06 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/medkart/inc/functions.php on line 6
+[20-Jun-2018 15:25:27 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/medkart/inc/functions.php on line 6
+[20-Jun-2018 15:38:12 Asia/Kolkata] PHP Notice:  Constant BASEURL already defined in /home/webtycoons/public_html/medkart/inc/functions.php on line 6
+[20-Jun-2018 12:17:30 UTC] PHP Parse error:  syntax error, unexpected 'as' (T_AS) in /home/webtycoons/public_html/medkart/app/Http/Controllers/UserController.php on line 8
+[20-Jun-2018 12:18:48 UTC] PHP Parse error:  syntax error, unexpected '$validator' (T_VARIABLE), expecting ')' in /home/webtycoons/public_html/medkart/app/Http/Controllers/UserController.php on line 48
+[20-Jun-2018 12:22:11 UTC] PHP Parse error:  syntax error, unexpected '$validator' (T_VARIABLE), expecting ')' in /home/webtycoons/public_html/medkart/app/Http/Controllers/UserController.php on line 48
+[20-Jun-2018 12:22:41 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/webtycoons/public_html/medkart/app/Http/Controllers/UserController.php on line 53
+[20-Jun-2018 12:23:15 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/webtycoons/public_html/medkart/app/Http/Controllers/UserController.php on line 47
+[20-Jun-2018 13:18:26 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/webtycoons/public_html/medkart/app/Http/Controllers/Auth/AuthController.php on line 73
+[20-Jun-2018 14:03:54 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Auth\Auth' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/Auth/AuthController.php on line 76
+[20-Jun-2018 15:12:39 UTC] PHP Fatal error:  Class 'App\Http\Controllers\BaseController' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/UserController.php on line 11
+[20-Jun-2018 15:13:39 UTC] PHP Fatal error:  Class 'App\Http\Controllers\BaseController' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/UserController.php on line 15
+[20-Jun-2018 15:14:05 UTC] PHP Fatal error:  Class 'App\Http\Controllers\BaseController' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/UserController.php on line 15
+[20-Jun-2018 15:25:52 UTC] PHP Fatal error:  Class 'App\Http\Controllers\DB' not found in /home/webtycoons/public_html/medkart/app/Http/Controllers/UserController.php on line 38
+[22-Jun-2018 15:31:47 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 89
+[22-Jun-2018 15:31:47 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 208
+[22-Jun-2018 15:31:47 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 133
+[22-Jun-2018 15:31:47 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 70
+[22-Jun-2018 15:31:47 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 74
+[22-Jun-2018 15:31:47 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 173
+[22-Jun-2018 15:31:47 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 208
+[22-Jun-2018 15:31:47 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 215
+[22-Jun-2018 15:31:47 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 208
+[22-Jun-2018 15:31:47 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 257
+[22-Jun-2018 15:31:47 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 70
+[22-Jun-2018 15:31:47 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 74
+[22-Jun-2018 15:31:47 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 299
+[22-Jun-2018 15:31:47 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 70
+[22-Jun-2018 15:31:47 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 74
+[22-Jun-2018 15:31:48 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 89
+[22-Jun-2018 15:31:48 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 208
+[22-Jun-2018 15:31:48 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 133
+[22-Jun-2018 15:31:48 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 70
+[22-Jun-2018 15:31:48 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 74
+[22-Jun-2018 15:31:48 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 173
+[22-Jun-2018 15:31:48 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 208
+[22-Jun-2018 15:31:48 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 215
+[22-Jun-2018 15:31:48 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 208
+[22-Jun-2018 15:31:48 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 257
+[22-Jun-2018 15:31:48 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 70
+[22-Jun-2018 15:31:48 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 74
+[22-Jun-2018 15:31:48 Asia/Kolkata] PHP Notice:  Undefined variable: where in /home/webtycoons/public_html/medkart/fil.php on line 299
+[22-Jun-2018 15:31:48 Asia/Kolkata] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 70
+[22-Jun-2018 15:31:48 Asia/Kolkata] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/webtycoons/public_html/medkart/inc/functions.php on line 74

@@ -1,0 +1,2031 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Jun 22, 2018 at 04:48 PM
+-- Server version: 5.6.39
+-- PHP Version: 5.6.36
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `website1_dawa`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `address`
+--
+
+CREATE TABLE `address` (
+  `id` int(11) NOT NULL,
+  `u_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `fname` varchar(255) NOT NULL,
+  `lname` varchar(255) NOT NULL,
+  `address` text NOT NULL,
+  `street` text NOT NULL,
+  `city` varchar(255) NOT NULL,
+  `state` varchar(255) NOT NULL,
+  `pincode` varchar(255) NOT NULL,
+  `phone` bigint(20) NOT NULL,
+  `default_address` enum('0','1') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `address`
+--
+
+INSERT INTO `address` (`id`, `u_id`, `title`, `fname`, `lname`, `address`, `street`, `city`, `state`, `pincode`, `phone`, `default_address`) VALUES
+(6, 1, 'Mr.', 'ayush', 'g', 'Delhi', 'gali  no 18, Kailash Nagar', 'Delhi', 'India', '110032', 9811881710, '0'),
+(8, 3, 'Mr.', 'pharmacist 1', 'g', 'Delhi', 'gali  no 18, Kailash Nagar', 'Delhi', 'Alabama', '110031', 9811881710, '0'),
+(9, 3, 'Mr.', 'pharmacist', 'g', 'Delhi', 's', 'Delhi', 'India', '110031', 9811881710, '0'),
+(10, 4, 'Mr.', 'pharmacist 1', 'g', 'Delhi', 'gali  no 18, Kailash Nagar', 'Delhi', 'India', '110031', 9811881710, '0'),
+(11, 5, 'Mr.', 'Ayush', 'test', 'Delhi', 'gali  no 18, Kailash Nagar', 'Delhi', 'India', '110031', 9811881710, '0'),
+(12, 6, 'Mr.', 'pharmacist 1', 'test', 'Delhi', 'gali  no 18, Kailash Nagar', 'Delhi', 'Alabama', '110031', 9811881710, '0'),
+(13, 4, 'Mr.', 'Ayush', 'g', 'Delhi', 'gali  no 18, Kailash Nagar', 's', 'India', '110031', 9811881710, '0'),
+(14, 7, 'Mr.', 'Ayush', 'test', 'Delhi', 'gali  no 18, Kailash Nagar', 'noida', 'India', '110032', 9811881710, '0'),
+(15, 10, 'Mr.', 'Ayush', 'test', 'Delhi', 'gali  no 18, Kailash Nagar', 'Delhi', 'India', '110031', 9811881710, '0'),
+(16, 9, 'Mr.', 'Ayush', 'test', 'Delhi', 'gali  no 18, Kailash Nagar', 'Delhi', 'India', '110031', 9811881710, '0'),
+(17, 13, 'Mr.', 'Manish', 'Kumar', 'Adarsh Nagar', 'lord krishna road', 'new delhi', 'India', '110033', 9136859293, '0'),
+(18, 14, 'Mrs.', 'Renu', 'kumari', 'nangloi', 'prem nagar', 'Delhi', 'India', '110031', 8826017796, '0'),
+(19, 15, 'Mrs.', 'Shruti', 'Goel', '123', '123', 'dont deliver', 'India', '110033', 9350262307, '0'),
+(20, 16, 'Mr.', 'Dheeraj', 'Aggarwal', '1123', '123', 'Delhi', 'India', '110033', 9350262307, '0'),
+(21, 15, 'Mr.', 'Dheeraj', 'Aggarwal', 'D-55, Lord Krishna Road, Adarsh Nagar', 'D-55, Lord Krishna Road, Adarsh Nagar', 'Delhi', 'India', '110033', 9350262307, '0'),
+(22, 17, 'Mr.', 'nidhi', 'bansal', '16/16', 'vikas puri', 'delji', 'India', '110018', 8826225077, '0'),
+(24, 17, 'Mr.', 'captain ', 'america', '13/13-a tilak nagar', 'high street', 'goa', 'Alabama', '110018', 2599505766, '0'),
+(25, 17, 'Mr.', 'black', 'widow', 'high me', 'tell no', 'gareeb rath', 'Alabama', '110018', 9999341505, '0'),
+(26, 1, 'Mr.', 'ayush', 'g', 'dasdsa dasdsa', 'dsadsadsa', 'new delhi', 'India', '110096', 9811881711, '0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `add_our_services`
+--
+
+CREATE TABLE `add_our_services` (
+  `id` int(11) NOT NULL,
+  `img` text NOT NULL,
+  `service_name` varchar(55) NOT NULL,
+  `sort` int(11) NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `add_our_services`
+--
+
+INSERT INTO `add_our_services` (`id`, `img`, `service_name`, `sort`, `status`) VALUES
+(4, 'images/Facilities/home-facilities-icon-two.png', 'Air conditioning', 2, 1),
+(12, 'images/Facilities/home-facilities-icon-eight.png', 'Free Parking', 3, 1),
+(13, 'images/Facilities/home-facilities-icon-three.png', 'Pet allowed', 4, 1),
+(17, 'images/Facilities/home-facilities-icon-four.png', 'Room service', 5, 1),
+(18, 'images/Facilities/home-facilities-icon-ten.png', 'GYM fecility', 6, 1),
+(19, 'images/Facilities/home-facilities-icon-five.png', 'TV LCD', 7, 1),
+(20, 'images/Facilities/home-facilities-icon-twelve.png', 'Wi-fi service', 8, 1),
+(24, 'images/Facilities/home-facilities-icon-one.png', 'Breakfast', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_login`
+--
+
+CREATE TABLE `admin_login` (
+  `id` int(11) NOT NULL,
+  `name` varchar(256) NOT NULL,
+  `username` varchar(256) NOT NULL,
+  `password` varchar(256) NOT NULL,
+  `email` varchar(256) NOT NULL,
+  `phone` varchar(256) NOT NULL,
+  `last_login_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin_login`
+--
+
+INSERT INTO `admin_login` (`id`, `name`, `username`, `password`, `email`, `phone`, `last_login_date`) VALUES
+(1, 'Medkart', 'medkart', 'mkart', 'manish.s@thewebtycoons.com', '8527458960', '2014-10-14 21:45:30');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_name`
+--
+
+CREATE TABLE `admin_name` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `status` enum('0','1') NOT NULL,
+  `img` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin_name`
+--
+
+INSERT INTO `admin_name` (`id`, `name`, `status`, `img`) VALUES
+(1, 'Medkart', '1', 'img/site-logo.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `afterslider_view`
+--
+
+CREATE TABLE `afterslider_view` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `img_png` text NOT NULL,
+  `text` text NOT NULL,
+  `img` text NOT NULL,
+  `link` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `afterslider_view`
+--
+
+INSERT INTO `afterslider_view` (`id`, `name`, `img_png`, `text`, `img`, `link`) VALUES
+(1, 'restaurant', 'images/hotelfacilties/img_2018-01-15-11-41-40_5a5c461ca68f6.png', '<h6>The world class</h6>\r\n\r\n<h3>Restaurant &amp; Banquets</h3>\r\n\r\n<p>Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.</p>\r\n\r\n<p>Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque.</p>\r\n\r\n<div class=\"our_services\"><a class=\"margin-right-33\" href=\"#\">Service Hours; 19.00-22:00 </a> <a href=\"#\">service charge : 15</a></div>\r\n', 'images/afterSlider_view/img_2018-02-03-16-17-26_5a75933ed73c0.png', '#'),
+(2, 'sports club', 'images/hotelfacilties/img_2018-01-15-12-19-39_5a5c4f0325197.png', '<h6>The world class</h6>\r\n\r\n<h3>Sports Club</h3>\r\n\r\n<p>Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.</p>\r\n\r\n<p>Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque.</p>\r\n\r\n<div class=\"our_services\"><a class=\"margin-right-33\" href=\"#\">Service Hours; 19.00-22:00 </a> <a href=\"#\">service charge : 15</a></div>\r\n', 'images/afterSlider_view/img_2018-02-03-16-18-17_5a759371cf66b.png', '#'),
+(3, 'pick up', 'images/hotelfacilties/img_2018-01-15-12-19-57_5a5c4f151923d.png', '<h6>The world class</h6>\r\n											<h3>Pick Up</h3>\r\n											<p> Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor. </p>\r\n											<p> Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque. </p>\r\n											<div class=\"our_services\"> <a href=\"#\" class=\"margin-right-33\">Service Hours; 19.00-22:00 </a> <a href=\"#\">service charge : <i class=\"fa fa-inr\"></i>15</a> </div>', 'images/afterSlider_view/img_2018-02-03-16-18-23_5a75937788312.png', '#');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `approve`
+--
+
+CREATE TABLE `approve` (
+  `id` int(11) NOT NULL,
+  `room_id` int(11) NOT NULL,
+  `client_id` int(11) NOT NULL,
+  `rooms` int(11) NOT NULL,
+  `start` date NOT NULL,
+  `end` date NOT NULL,
+  `approve` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `approve`
+--
+
+INSERT INTO `approve` (`id`, `room_id`, `client_id`, `rooms`, `start`, `end`, `approve`) VALUES
+(16, 5, 24, 1, '2018-01-30', '2018-01-31', 1),
+(17, 4, 24, 1, '2018-01-30', '2018-01-31', 1),
+(21, 4, 25, 2, '2018-01-30', '2018-01-31', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `basic_details`
+--
+
+CREATE TABLE `basic_details` (
+  `id` int(11) NOT NULL,
+  `text` varchar(255) NOT NULL,
+  `address` text NOT NULL,
+  `phone` text NOT NULL,
+  `email` text NOT NULL,
+  `footer_text` text NOT NULL,
+  `home_text` text NOT NULL,
+  `footer_link` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `basic_details`
+--
+
+INSERT INTO `basic_details` (`id`, `text`, `address`, `phone`, `email`, `footer_text`, `home_text`, `footer_link`) VALUES
+(1, 'CONTACT US', 'St Amsterdam finland, United Stats of AKY16 8PN', '11111111111111111', 'ayush@cpearls.com', '<div class=\"row\">\r\n<div class=\"col-lg-12\" style=\"margin-top: 12px;\">\r\n<h4>We are Available in</h4>\r\n</div>\r\n\r\n<div class=\"col-lg-12\">\r\n<p><span style=\"color:white\">Agra, Allahabad, Ahmedabad, Bhopal, Chennai, Delhi - NCR, Durgapur, Faridabad, Ghaziabad, Gurugram, Gwalior, Howrah, Hyderabad, Indore, Jabalpur, Jaipur, Kanpur, Kharagpur, Kolkata, Lucknow, Mumbai, Noida, Pune, Rajkot, Surat, Thane, Vadodara , Varanasi &amp; Major cities of Karnataka</span></p>\r\n</div>\r\n</div>\r\n', '<p><span style=\"color:rgb(102, 102, 102); font-family:karla,sans-serif; font-size:16px\">Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.</span></p>\r\n', '<div class=\"col-md-3 col-sm-3\">\r\n								<!-- - - - - - - - - - - - - - Information widget - - - - - - - - - - - - - - - - -->\r\n								<div class=\"widget\">\r\n                                	<div class=\"list_of_links\">\r\n									<ul>\r\n										<li><a href=\"about.php\">About Us</a></li>\r\n										<li><a href=\"faq.php\">FAQs</a></li>\r\n										<li><a href=\"#\">Privacy Policy</a></li>\r\n										<li><a href=\"#\">Terms of Use</a></li>\r\n									</ul>\r\n                                    </div>\r\n								</div>\r\n								<!-- - - - - - - - - - - - - - End information widget - - - - - - - - - - - - - - - - -->\r\n							</div>\r\n                            <div class=\"col-md-3 col-sm-3\">\r\n\r\n								<!-- - - - - - - - - - - - - - Information widget - - - - - - - - - - - - - - - - -->\r\n\r\n								<div class=\"widget\">\r\n                                	<div class=\"list_of_links\">\r\n									<ul >\r\n\r\n                                        <li><a href=\"#\">Newsroom</a></li>\r\n										<li><a href=\"contact.php\">Contact Us</a></li>\r\n                                        <li> <a class=\"small_link\" href=\"#\">Help</a></li>\r\n                                        <li> <a class=\"small_link\" href=\"#\">Track your order</a></li>\r\n\r\n									</ul>\r\n\r\n								 </div>\r\n								</div>\r\n								\r\n								<!-- - - - - - - - - - - - - - End information widget - - - - - - - - - - - - - - - - -->\r\n\r\n							</div>');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blog`
+--
+
+CREATE TABLE `blog` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `img` text NOT NULL,
+  `msg` longtext NOT NULL,
+  `sort` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  `blog_id` int(11) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `blog`
+--
+
+INSERT INTO `blog` (`id`, `title`, `img`, `msg`, `sort`, `status`, `blog_id`, `date`) VALUES
+(1, 'About us', 'images/blog/img_2018-02-01-16-06-03_5a72ed93074c0.jpeg', '<p>x</p>\r\n', 0, 1, 1, '2018-02-28'),
+(2, 'About us', 'images/blog/img_2018-02-01-16-16-56_5a72f020683bb.jpeg', '<h3 style=\"text-align:justify\">Preventing Heart Failure in Type 2 Diabetes</h3>\r\n\r\n<p style=\"text-align:justify\">Type 2 diabetes and heart failure could be a deadly combination; a study had shown in June 2011. But now, according to the researchers of KarolinskaInstitutet, shows that patients with Type 2 diabetes, who had undergone coronary artery surgery prior to their heart failure being diagnosed, have better chances of survival. Generally, type 2 diabetes patients are diagnosed with one or more heart diseases like high blood pressure, COPD or atrial fibrillation, and for all these, effective treatments are available, that better the chances of survival. More often than not, the heart failure is caused due to atherosclerotic coronary artery disease (CAD). To improve the blood supply to the heart muscle, patients of CAD are given either a bypass operation or catheter balloon dilation. Earlier, the long term effects of these surgeries were unknown, but now the studies have proven that a coronary artery surgery is very effective in preventing heart failure in type 2 diabetic patients, irrespective of other hampering factors like old age, and other diseases. But, the decision of the surgery should be taken after great consideration, as it was shown in an observational study that coronary artery surgery was not randomly distributed, hence giving some weightage to other important factors as well. Hence, the surgical decision should be taken with great caution.</p>\r\n', 0, 1, 2, '2018-02-28');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blog_id`
+--
+
+CREATE TABLE `blog_id` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `sort` int(11) NOT NULL,
+  `status` enum('1','0') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cms`
+--
+
+CREATE TABLE `cms` (
+  `id` int(11) NOT NULL,
+  `title` varchar(256) NOT NULL,
+  `content` text NOT NULL,
+  `image` varchar(555) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cms`
+--
+
+INSERT INTO `cms` (`id`, `title`, `content`, `image`) VALUES
+(1, 'About us', '<p><img alt=\"\" class=\"alignleft\" src=\"http://localhost/dawa/upload_content_image/arrivals_img_4.jpg\" />Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel.</p>\r\n\r\n<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>\r\n\r\n<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque eget, <a href=\"#\">malesuada at</a>, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>\r\n\r\n<p>Nam elit agna,endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem, interdum vitae,dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl.</p>\r\n', 'ceo.png'),
+(2, 'Shipping Policy', '<p>The Dawakhana&nbsp;has a transparent and clear shipping policy for all orders placed on our website. We strive to deliver products in excellent condition and in the fastest time possible. For all the subsequent purchases of Rs. 500* or more, we will deliver the order to your doorstep free of cost. A shipping charge will be applicable to all orders under Rs. 500.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>What are the delivery charges?</strong></p>\r\n\r\n<p>We offer&nbsp;FREE Shipping (specified on the Product detail page) on selected products ordered through <a href=\"http://www.The-Dawakhana.com/\">www.The Dawakhana.com</a>. It is varies on item to item.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Just because shipping is free doesn&#39;t mean it should take a long time. The Dawakhana understands that getting your items quickly is important to you, so we make every effort to process your order quickly.</p>\r\n\r\n<p><strong>What is the estimated delivery time?</strong></p>\r\n\r\n<p>We generally ship the items within the time specified on the product page. Business days exclude public holidays and Sundays.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Are there any hidden costs (like sales tax)?</strong></p>\r\n\r\n<p>There are NO hidden charges when you make a purchase. List prices are final and all-inclusive. The price you see on the product page is exactly what you would pay.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Where would be delivered?</strong></p>\r\n\r\n<p>Each order may be shipped only to a single destination address specified at the time of payment for that order. If you wish to ship products to different addresses, you shall need to place multiple orders.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>To ensure that your order reaches you in the fastest time and in good condition, we only ship through reputed courier agencies.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>If you believe that the product is not in good condition, or if the packaging is tampered with or damaged, before accepting delivery of the goods, please refuses to take delivery of the package, and call our Support no- +91-8588900224, mentioning your order reference number. We shall make our best efforts to ensure that a replacement delivery is made to you at the earliest</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>You may track the shipping status of your order on our website, by clicking at Track My Order section.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Please note all items (including gifts) will be shipped with an invoice mentioning the price, as per Indian Tax Regulations</p>\r\n', ''),
+(3, 'Corporate', '<p>Coming Soon....</p>\r\n', ''),
+(4, 'Disclaimer', '<p style=\"text-align:justify\">The Dawakhana <span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">&nbsp; and their respective publishers, authors, agents and employees have done their best to ensure the accuracy and currency of all the information on this website contributed by them; however, they accept no responsibility for any loss, injury, or damages sustained by anyone as a result of information or advice contained on the site nor for the results of any travel arrangement originating from this site. The use of information on or derived from this site and any arrangement for travel with person&#39;s contacted through the site is made at the user&#39;s own risk. We encourage you to verify any critical information with the relevant authorities before you travel. This includes information on visa requirements, health and safety, customs, and transportation.</span></span>&nbsp;<span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">All such documents and related graphics are provided &#39;&#39;as is&#39;&#39; without warranty of any kind, statutory or otherwise. </span></span>The Dawakhana and<span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\"> their respective publishers, authors, agents and employees disclaim all warranties and conditions with regard to this internet site and the information contained therein, including, without limitation, all implied warranties and conditions of merchantability, fitness for a particular purpose, title, and non-infringement.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">The documents and related graphics published on this website could include technical inaccuracies or typographical errors. Changes are periodically added to the information herein. </span></span>The Dawakhana <span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">&nbsp;may make improvements and/or changes in the product(s) described herein at any time. The linked sites are not under the control of </span></span>The Dawakhana <span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\"> and their respective employees are not responsible for the contents of any linked site or any link contained in a linked site. </span></span>The Dawakhana <span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\"> is providing these external links to you only as a convenience, and the inclusion of any link does not imply endorsement by </span></span>The Dawakhana <span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\"> of the site. All views expressed by individuals on this site are their personal opinions and are not necessarily those of or endorsed by </span></span>The Dawakhana <span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">.</span></span></p>\r\n\r\n<p><strong>Office Address:<br />\r\nPrashant Vihar<br />\r\nNew Delhi</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n', ''),
+(5, 'Return Policy', '<p style=\"text-align:justify\"><strong><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Cancellation P</span></span>olicy</strong><br />\r\nYou can cancel your order online before the product has been shipped. Your entire order amount will be refunded through Online payment mode if ordered through prepaid. In case the item you have ordered has been shipped but has not yet been delivered to you, you may still cancel the order online. Your refund will be processed once we receive the originally ordered item back from the courier. Unfortunately, an order cannot be cancelled once the item has been delivered to you.<br />\r\n<br />\r\n<strong>Return &amp; Refund Policy</strong><br />\r\n<span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">In case the wrong product is delivered or you are not happy with the quality of the product or the product doesn&#39;t fit you properly, you can return the product to our address within 15 Days of delivery. We will replace the product or refund entire amount (less the shipping charges).<br />\r\nFor Returns, Kindly make sure the return products should be unworn, unwashed merchandise with all tags attached. The product must also be in its original undamaged packaging. &nbsp;Due to the intimate nature and hygienic standards of certain items, Panties and accessories are not eligible for returns. Items on Sale are also not eligible for returns.<br />\r\nKindly email us at musicemporio@gmail.com to inform us of the return and convey the airway bill number and details of the courier so that we may track and process it.<br />\r\nWe will notify you via e-mail of your refund within 10 working days of receiving your courier. For Refund, You will be issued a coupon of the same amount only for the items which will be returned. This coupon can be used for a future purchase on www.musicemporio.com</span></span><br />\r\n<br />\r\n<strong>Return Office Address</strong><br />\r\nPrashant Vihar<br />\r\nNew Delhi<br />\r\n+91-+91-9999800032</p>\r\n', ''),
+(6, 'Contact Us', '<p><strong>Address:</strong><br />\r\nE-74, Shastri Nagar<br />\r\nDelhi - 110052<br />\r\n<strong>Phone No : </strong>+91-<big><small>8588900224</small></big><br />\r\n<strong>E-Mail ID :&nbsp;</strong>support@click123india.com</p>\r\n', ''),
+(7, 'Privacy Policy', '<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\"><strong>SHIPPING CHARGES&nbsp;TAXES AND TITLE</strong></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Separate charges for shipping and handling will be shown on your order form. Most orders received before 5:00 p.m. Eastern Time, Monday through Friday, are shipped within 5 working days! Orders placed on Saturdays, Sundays, or holidays will be processed the next business day. As a security precaution, initial orders and orders shipping to alternate addresses may be held for extended verification. We reserve the right to make partial shipments, which will not relieve you of your obligation to pay for the remaining deliveries.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">All items purchased from Music Emporio&nbsp;are made pursuant to a shipment contract. This means that the risk of loss and title for such items passes to you upon our delivery to the carrier.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">MUSIC EMPORIO&nbsp;PROVIDESNO SEPARATE WARRANTY AND TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, MUSIC EMPORIO EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS REGARDING ANY PRODUCTS SOLD TO YOU, WHETHER EXPRESS, IMPLIED OR STATUTORY, AND INCLUDING BUT NOT LIMITED TO ALL WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT OF THIRD PARTY RIGHTS. You may purchase additional warranty coverage if you pay for our Gold Coverage warranty.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">LOWEST PRICE GUARANTEE</span></span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Buy with confidence. If you find a lower advertised price from any authorized Indian dealer before or after the sale, call or email us. We&#39;ll beat any verifiable advertised price by 10% of the difference. If you&#39;ve already purchased from us and find a lower advertised price within 14 days of your purchase, contact us via phone or email and we&#39;ll refund the difference after verification.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">For Internet requests, please contact us at online support and have the competing website address (preferably the specific product page URL) included for our representative. We&#39;ll verify the online pricing and product description, brand name, availability, and relative price and product specifications. Due to manufacturer restrictions, some products are excluded from this guarantee. Please ask a sales representative for details or contact us at online support. Advertised items must be factory-sealed new product. Demo models, factory seconds, sale items, discontinued merchandise, and floor samples not included. Items must be in-stock, advertised, and verifiable on the web or in a local or national paper, magazine, or catalog by an authorized dealer (you may be required to email or fax a copy of the competitor&#39;s offer). Music Emporio will beat combined or multiple offers at its sole discretion.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">14-DAY 100% SATISFACTION GUARANTEE</span></span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">If you are not completely satisfied with any product, return it for a full refund of the product purchase price, full credit, or exchange of your choice. We give you 14 days from the shipping date. That&#39;s the best guarantee in the Indian music industry.</span></span><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Music Emporio only accepts returns made within the first 14 days from shipment.</span></span><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Should you find it necessary to return any merchandise, it must be shipped within this 14-day guarantee period. Please follow the return instructions printed on the back of your invoice. All returned items must include a Return Authorization Number, be in the original packaging complete with all components including the warranty card and owner&rsquo;s manual and show no signs of wear or abuse; otherwise the return will either be refused or subject to a 15% restocking fee. Credit card returns are issued a credit for purchase price.</span></span></p>\r\n', ''),
+(8, 'Terms Conditions', '<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\"><strong>ENTIRE AGREEMENT</strong></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Other than as specifically provided in any separate formal purchase agreement between you and Music Emporio, these terms and conditions (this &ldquo;Agreement&rdquo;) apply to all of your online purchases from the website at www.bajaao.com (the &ldquo;Site&rdquo;) and may NOT be altered, supplemented, or amended by you through the use of any other document(s). Any attempt to alter, supplement, or amend this document or to enter an order for product(s) which is subject to additional or altered terms and conditions will be null and void, unless otherwise agreed to in a written agreement signed by both you and Music Emporio.</span></span><br />\r\n&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\"><strong>ACCEPTANCE</strong></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">By purchasing products and/or services from the Site, you agree to be bound by and accept this Agreement. Orders are not binding upon </span></span>Music Emporio<span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\"> until accepted by </span></span>Music Emporio<span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">. We reserve the right to refuse service to anyone. </span></span>Music Emporio<span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\"> will indicate its acceptance of an order by acknowledging your order by reply email or by shipping the ordered items to you.</span></span><br />\r\n&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">PRICING</span></span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Because prices, product descriptions, and availability can change quickly, </span></span>Music Emporio<span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\"> does not warrant the accuracy or completeness of the information provided on the Site. For more on our pricing policies, please refer to our Site Terms of Use.</span></span><br />\r\n&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">PAYMENT TERMS ORDERS</span></span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Internet orders may be paid for using the following methods: VISA, MasterCard, NEFT, Cheque, Direct Cash Deposit. Cash can be directly deposited into our bank account.</span></span><br />\r\n&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">CASH ON DELIVERY (COD)</span></span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Music Emporio will verify every order before processing and we reserve the right to cancel the order in case the order is not eligible for COD.The order amount has to be paid in full before receiving the package and signing the delivery sheet. The package can be opened only after the payment is made.&nbsp;Please note, payment through cheque, draft or any other means will not be acceptable.<br />\r\n<br />\r\n<br />\r\n<strong>LIMITED QUANTITIES</strong></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Some products, including those identified as Hot Buys, Closeouts, Limited Quantity items, and Free Gifts may be limited to stock on hand and are offered on a first come, first served basis.</span></span></p>\r\n', ''),
+(9, 'Customer Support', '<h3>Email id - <a href=\"mailto:support@click123india.com\">support@click123india.com</a><br />\nContact No - <small>(+91)8588900224</small></h3>\n', ''),
+(10, 'Know Your Lingeries', '<p>\r\n	Coming Soon.</p>\r\n', ''),
+(11, 'Our Stories', '<p style=\"text-align:justify\"><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Music Emporio is India&#39;s largest direct online retailer for musical instruments and pro audio equipment. We also offer a wide range of services to the music entertainment industry. <a href=\"http://musicemporio.com/about.php\">Read More&nbsp;</a></span></span></p>\r\n', 'bgup.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `company_name`
+--
+
+CREATE TABLE `company_name` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `sort` int(11) NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `company_name`
+--
+
+INSERT INTO `company_name` (`id`, `name`, `sort`, `status`) VALUES
+(14, 'A&D Instruments India Private Limited', 1, 1),
+(15, 'Zeneris Pharma Pvt Ltd', 2, 1),
+(16, 'Johnson & Johnson Ltd', 3, 1),
+(17, 'Saify Health Care and Medi Devices India Pvt Ltd', 4, 1),
+(18, 'Vertech Health Solutions India Pvt Ltd', 5, 1),
+(19, 'Omron Healthcare India Pvt Ltd', 6, 1),
+(20, 'Roche Diabetes Care India Pvt Ltd.', 7, 1),
+(22, 'Aimil Pharmaceuticals India Ltd', 1, 1),
+(72, 'Aglowmed Drugs Pvt. Ltd.', 1, 1),
+(74, 'Ravenbhel Pharmaceuticals Pvt Ltd', 1, 1),
+(102, 'Icon Life Sciences', 1, 1),
+(123, 'St Morrison', 1, 1),
+(126, 'Scortis Lab Pvt Ltd', 1, 1),
+(127, 'Life Medicare & Biotech Pvt Ltd', 1, 1),
+(136, 'M D C Pharmaceuticals P Ltd', 1, 1),
+(156, 'Glenmark Pharmaceuticals Ltd', 1, 1),
+(176, 'Jan Aushadhi', 1, 1),
+(179, 'Unichem Laboratories Ltd', 1, 1),
+(185, 'Karnataka Antibiotics & Pharmaceuticals Ltd', 1, 1),
+(188, 'ZYDUS CADILA', 1, 1),
+(194, 'Aretaeus Pharmaceuticals', 1, 1),
+(195, 'Shreya Life Sciences Pvt Ltd', 1, 1),
+(203, 'Franco-Indian Pharmaceuticals Pvt Ltd', 1, 1),
+(204, 'Systopic Laboratories Pvt Ltd', 1, 1),
+(207, 'Salud Care India Pvt Ltd', 1, 1),
+(209, 'Merck Ltd', 1, 1),
+(215, 'Macleods Pharmaceuticals Pvt Ltd', 1, 1),
+(216, 'Organon (India) Ltd', 1, 1),
+(219, 'Sanofi India Ltd', 1, 1),
+(222, 'Lupin Ltd', 1, 1),
+(223, 'Sun Pharmaceutical Industries Ltd', 1, 1),
+(224, 'USV Ltd', 1, 1),
+(226, 'Ranbaxy Laboratories Ltd', 1, 1),
+(230, 'FDC Ltd', 1, 1),
+(232, 'Elder Pharamaceuticals Ltd', 1, 1),
+(237, 'Biocon', 1, 1),
+(247, 'Manufacturer', 1, 1),
+(249, 'Southshourne Corporation India', 1, 1),
+(253, 'Ind Swift Laboratories Ltd', 1, 1),
+(255, 'Morepen Laboratories Ltd', 1, 1),
+(256, 'Blue Cross Laboratories Ltd', 1, 1),
+(257, 'Parenteral Drugs India Ltd', 1, 1),
+(258, 'Meyer Organics Pvt Ltd', 1, 1),
+(259, 'Abbott India Ltd', 1, 1),
+(261, 'Sresan Pharmaceuticals', 1, 1),
+(262, 'Euphoric Pharmaceuticals Pvt Ltd', 1, 1),
+(263, 'Unison Pharmaceuticals Pvt Ltd', 1, 1),
+(264, 'Ajanta Pharma Ltd', 1, 1),
+(265, 'Comed Chemicals Ltd', 1, 1),
+(266, 'Dial Pharmaceuticals Pvt Ltd', 1, 1),
+(267, 'Medley Pharmaceuticals', 1, 1),
+(268, 'Udik Pharmaceuticals Pvt Ltd', 1, 1),
+(269, 'Olcare Laboratories', 1, 1),
+(270, 'Biochem Pharmaceutical Industries', 1, 1),
+(271, 'Marc Laboratories Pvt Ltd', 1, 1),
+(272, 'Msn Laboratories Ltd', 1, 1),
+(273, 'Venus Remedies Ltd', 1, 1),
+(274, 'Shine Pharmaceuticals Ltd', 1, 1),
+(276, 'Biological E Ltd', 1, 1),
+(278, 'Acron Pharmaceuticals', 1, 1),
+(279, 'Cipla Ltd', 1, 1),
+(282, 'Organic Laboratories', 1, 1),
+(283, 'DR. JOHNS LABORATORIES PVT LTD', 1, 1),
+(284, 'Cure Quick Pharmaceuticals', 1, 1),
+(285, 'Medreich Lifecare Ltd', 1, 1),
+(286, 'Psychotropics India Ltd', 1, 1),
+(287, 'Avinash Health Products Pvt Ltd', 1, 1),
+(288, 'Tas Med India Pvt Ltd', 1, 1),
+(290, 'Stadmed Pvt Ltd', 1, 1),
+(292, 'Alde Medi Impex Ltd', 1, 1),
+(294, 'Fiale Pharmaceuticals', 1, 1),
+(295, 'Akesiss Pharma Pvt Ltd', 1, 1),
+(297, 'Fourrts India Laboratories Pvt Ltd', 1, 1),
+(299, 'Mitoch Pharma Pvt Ltd', 1, 1),
+(300, 'Mankind Pharma Ltd', 1, 1),
+(301, 'Orchid Chemicals & Pharmaceuticals Ltd', 1, 1),
+(302, 'Nectar Remedies Ltd', 1, 1),
+(303, 'Mova Pharmaceutical Pvt Ltd', 1, 1),
+(305, 'Intas Pharmaceuticals Ltd', 1, 1),
+(306, 'Wockhardt Ltd', 1, 1),
+(307, 'Alembic Pharmaceuticals Ltd', 1, 1),
+(308, 'Emcure Pharmaceuticals Ltd', 1, 1),
+(310, 'Heal India Laboratories', 1, 1),
+(312, 'Aristo Pharmaceuticals Pvt Ltd', 1, 1),
+(313, 'Primus Pharmaceuticals', 1, 1),
+(314, 'Indi Pharma', 1, 1),
+(315, 'RELIANCE FORMULATION PVT LTD', 1, 1),
+(316, 'Khandelwal Laboratories Pvt Ltd', 1, 1),
+(317, 'Precia Pharma', 1, 1),
+(318, 'Wallace Pharmaceuticals Pvt Ltd', 1, 1),
+(319, 'Win-Medicare Pvt Ltd', 1, 1),
+(320, 'Bal Pharma Ltd', 1, 1),
+(321, 'Sinsan Pharmaceuticals', 1, 1),
+(322, 'Jagsonpal Pharmaceuticals Ltd', 1, 1),
+(323, 'Fidelity Lifesciences Pvt Ltd', 1, 1),
+(324, 'Cadila Pharmaceuticals Ltd', 1, 1),
+(325, 'Novartis India Ltd', 1, 1),
+(326, 'AN Pharmaceuticals Pvt Ltd', 1, 1),
+(327, 'Ipca Laboratories Ltd', 1, 1),
+(328, 'Torrent Pharmaceuticals Ltd', 1, 1),
+(329, 'Deys Medical', 1, 1),
+(330, 'Shrinivas Gujarat Laboratories Pvt Ltd', 1, 1),
+(331, 'Exotic Laboratories Pvt Ltd', 1, 1),
+(333, 'Eris Life Sciences Pvt Ltd', 1, 1),
+(334, 'Strides Arcolab Ltd', 1, 1),
+(337, 'Alkem Laboratories Ltd', 1, 1),
+(338, 'ALGEN HEALTHCARE PVT LTD', 1, 1),
+(339, 'Indoco Remedies Ltd', 1, 1),
+(340, 'Brooks Pharmaceuticals', 1, 1),
+(341, 'Dr Reddy\'s Laboratories Ltd', 1, 1),
+(342, 'Micro Labs Ltd', 1, 1),
+(343, 'Panacea Biotec Ltd', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `filter_age`
+--
+
+CREATE TABLE `filter_age` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `sortorder` int(11) NOT NULL,
+  `status` enum('1','0') NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `filter_age`
+--
+
+INSERT INTO `filter_age` (`id`, `name`, `sortorder`, `status`) VALUES
+(1, 'All', 1, '1'),
+(2, 'Child', 2, '1'),
+(3, 'Elderly', 3, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `filter_brand`
+--
+
+CREATE TABLE `filter_brand` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `sortorder` int(11) NOT NULL,
+  `status` enum('1','0') NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `filter_brand`
+--
+
+INSERT INTO `filter_brand` (`id`, `name`, `sortorder`, `status`) VALUES
+(1, 'Dr. Reckeweg', 1, '1'),
+(105, 'Himalaya Healthcare', 2, '1'),
+(106, 'ADEL', 4, '1'),
+(107, 'Himalaya Wellness', 3, '1'),
+(110, 'Tedibar', 5, '1'),
+(111, 'Chicco', 6, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `filter_discount`
+--
+
+CREATE TABLE `filter_discount` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `sortorder` int(11) NOT NULL,
+  `status` enum('1','0') NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `filter_discount`
+--
+
+INSERT INTO `filter_discount` (`id`, `name`, `sortorder`, `status`) VALUES
+(1, 'Less than 10%', 1, '1'),
+(2, '10% and above', 2, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `filter_form`
+--
+
+CREATE TABLE `filter_form` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `sortorder` int(11) NOT NULL,
+  `status` enum('1','0') NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `filter_form`
+--
+
+INSERT INTO `filter_form` (`id`, `name`, `sortorder`, `status`) VALUES
+(1, 'Tablet', 1, '1'),
+(2, 'Capsule', 2, '1'),
+(3, 'Powder', 3, '1'),
+(4, 'Oil', 4, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `filter_gender`
+--
+
+CREATE TABLE `filter_gender` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `sortorder` int(11) NOT NULL,
+  `status` enum('1','0') NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `filter_gender`
+--
+
+INSERT INTO `filter_gender` (`id`, `name`, `sortorder`, `status`) VALUES
+(1, 'Unisex', 1, '1'),
+(2, 'Female', 2, '1'),
+(3, 'Male', 3, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `filter_uses`
+--
+
+CREATE TABLE `filter_uses` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `sortorder` int(11) NOT NULL,
+  `status` enum('1','0') NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `filter_uses`
+--
+
+INSERT INTO `filter_uses` (`id`, `name`, `sortorder`, `status`) VALUES
+(1, 'Stomach Care', 1, '1'),
+(2, 'Skin Care', 2, '1'),
+(3, 'Respiratory Care', 3, '1'),
+(4, 'Mind Care', 4, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `is_subscribed`
+--
+
+CREATE TABLE `is_subscribed` (
+  `id` int(11) NOT NULL,
+  `req_id` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `is_subscribed`
+--
+
+INSERT INTO `is_subscribed` (`id`, `req_id`, `email`, `date`) VALUES
+(19, 0, 'the@g.com', '2018-01-09'),
+(20, 0, 'the@g.comsdf', '2018-01-09'),
+(21, 0, 'a@g.com', '2018-01-09'),
+(22, 0, 'ayush@thewebtycoons.com', '2018-02-03');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `loyality_points`
+--
+
+CREATE TABLE `loyality_points` (
+  `id` int(11) NOT NULL,
+  `order_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `loyality_points` decimal(11,2) NOT NULL,
+  `status` int(11) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `loyality_points`
+--
+
+INSERT INTO `loyality_points` (`id`, `order_id`, `user_id`, `loyality_points`, `status`, `date`) VALUES
+(1, 14, 1, 10.00, 1, '2018-06-22 07:14:24'),
+(2, 9, 15, 2.00, -1, '2018-06-22 07:15:13'),
+(3, 15, 1, 1.00, -1, '2018-06-22 07:22:03');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu`
+--
+
+CREATE TABLE `menu` (
+  `id` int(11) NOT NULL,
+  `menu_icon` text NOT NULL,
+  `menu` varchar(555) NOT NULL,
+  `link` text NOT NULL,
+  `Products_name` varchar(555) NOT NULL,
+  `text` longtext NOT NULL,
+  `ban_img` varchar(5555) NOT NULL,
+  `img` text NOT NULL,
+  `pos` enum('left menu','top menu') NOT NULL,
+  `enum` enum('menu') NOT NULL,
+  `sort` int(11) NOT NULL,
+  `status` enum('0','1') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `menu`
+--
+
+INSERT INTO `menu` (`id`, `menu_icon`, `menu`, `link`, `Products_name`, `text`, `ban_img`, `img`, `pos`, `enum`, `sort`, `status`) VALUES
+(1, 'images/icon/img_2018-02-01-13-29-41_5a72c8edb67f1.png', 'Medicine', '0', '', '', '', '', 'left menu', 'menu', 2, '1'),
+(2, 'images/icon/img_2018-02-01-13-32-15_5a72c98796771.png', 'Medical Devices', 'product', '', '<div class=\"facilities_top_para\">\r\n<p>Semper ac dolor vitae msan. Cras interdum hendreritnia Phasellus accumsan rna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor. Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nuroin vehicula nunc arcu, pulvinarlla porta vel. Vivamus malesuada vitae sem ac pellentesque.</p>\r\n</div>\r\n\r\n<div class=\"facilities_main_part\">\r\n<div class=\"section_title margin-top-80 margin-bottom-35\">\r\n<h5>Our Room Facilities</h5>\r\n</div>\r\n\r\n<div class=\"row\">\r\n<div class=\"facilities_name clearfix margin-bottom-45\">\r\n<div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-6\">\r\n<ul>\r\n	<li><img alt=\"\" src=\"img/home-facilities-icon-one.png\" />\r\n	<p>Breakfast</p>\r\n	</li>\r\n	<li><img alt=\"\" src=\"img/home-facilities-icon-four.png\" />\r\n	<p>Room service</p>\r\n	</li>\r\n</ul>\r\n</div>\r\n\r\n<div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-6\">\r\n<ul>\r\n	<li><img alt=\"\" src=\"img/home-facilities-icon-two.png\" />\r\n	<p>Air conditioning</p>\r\n	</li>\r\n	<li><img alt=\"\" src=\"img/home-facilities-icon-ten.png\" />\r\n	<p>GYM fecility</p>\r\n	</li>\r\n</ul>\r\n</div>\r\n\r\n<div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-6\">\r\n<ul>\r\n	<li><img alt=\"\" src=\"img/home-facilities-icon-eight.png\" />\r\n	<p>Free Parking</p>\r\n	</li>\r\n	<li><img alt=\"\" src=\"img/home-facilities-icon-five.png\" />\r\n	<p>TV LCD</p>\r\n	</li>\r\n</ul>\r\n</div>\r\n\r\n<div class=\"col-lg-2 col-md-2 col-sm-2 col-xs-6\">\r\n<ul>\r\n	<li><img alt=\"\" src=\"img/home-facilities-icon-three.png\" />\r\n	<p>Pet allowed</p>\r\n	</li>\r\n	<li><img alt=\"\" src=\"img/home-facilities-icon-twelve.png\" />\r\n	<p>Wi-fi service</p>\r\n	</li>\r\n</ul>\r\n</div>\r\n\r\n<div class=\"col-lg-2 col-md-2 col-sm-1 col-xs-12\">\r\n<div class=\"single_facilities_name clearfix\"><a class=\"btn btn-warning btn-md\" href=\"#\">Book Room</a></div>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n<div class=\"col-lg-12 col-md-12\">\r\n<div class=\"about_us_thumb margin-bottom-75\">\r\n<p>Semper ac dolor vitae msan. Cras interdum hendreritnia Phasellus accumsan rna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor. Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nuroin vehicula nunc arcu, pulvinarlla porta vel. Vivamus malesuada vitae sem ac pellentesque.</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n', '', '', 'left menu', 'menu', 2, '1'),
+(3, 'images/icon/img_2018-02-01-13-33-09_5a72c9bd44b1f.png', 'OTC', '0', '', '', '', '', 'left menu', 'menu', 3, '1'),
+(4, 'images/icon/img_2018-02-01-13-33-42_5a72c9deeddde.png', 'Insurance', 'product', '', '', '', '', 'left menu', 'menu', 4, '1'),
+(6, 'images/icon/img_2018-02-08-11-15-08_5a7be3e42038d.png', 'Personal Care', '0', '', '', '', '', 'left menu', 'menu', 1, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_address`
+--
+
+CREATE TABLE `order_address` (
+  `id` int(11) NOT NULL,
+  `order_confirm_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `fname` varchar(255) NOT NULL,
+  `lname` varchar(255) NOT NULL,
+  `address` text NOT NULL,
+  `street` text NOT NULL,
+  `city` varchar(255) NOT NULL,
+  `state` varchar(255) NOT NULL,
+  `pincode` varchar(255) NOT NULL,
+  `phone` bigint(20) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `order_address`
+--
+
+INSERT INTO `order_address` (`id`, `order_confirm_id`, `title`, `fname`, `lname`, `address`, `street`, `city`, `state`, `pincode`, `phone`, `email`) VALUES
+(14, 14, 'Mr.', 'ayush', 'g', 'Delhi', 'gali  no 18, Kailash Nagar', 'Delhi', 'India', '110032', 9811881710, 'ayush@thewebtycoons.com'),
+(15, 15, 'Mr.', 'pharmacist 1', 'g', '11/131 ', 'Geeta colony', 'Delhi', 'India', '110031', 9811881710, 'ayush@thewebtycoons.com'),
+(16, 16, 'Mr.', 'pharmacist 1', 'g', '11/131 ', 'Geeta colony', 'Delhi', 'India', '110031', 9811881710, 'ayush@thewebtycoons.com'),
+(17, 17, 'Mr.', 'ayush', 'g', 'Delhi', 'gali  no 18, Kailash Nagar', 'Delhi', 'India', '110032', 9811881710, 'ayush@thewebtycoons.com'),
+(18, 18, 'Mr.', 'pharmacist 1', 'g', '11/131 ', 'Geeta colony', 'Delhi', 'India', '110031', 9811881710, 'ayush@thewebtycoons.com'),
+(19, 19, 'Mr.', 'pharmacist 1', 'g', '11/131 ', 'Geeta colony', 'Delhi', 'India', '110031', 9811881710, 'ayush@thewebtycoons.com'),
+(20, 20, 'Mr.', 'pharmacist 1', 'g', '11/131 ', 'Geeta colony', 'Delhi', 'India', '110031', 9811881710, 'ayush@thewebtycoons.com'),
+(21, 21, 'Mr.', 'pharmacist 1', 'g', '11/131 ', 'Geeta colony', 'Delhi', 'India', '110031', 9811881710, 'ayush@thewebtycoons.com'),
+(22, 22, 'Mr.', 'pharmacist 1', 'g', '11/131 ', 'Geeta colony', 'Delhi', 'India', '110031', 9811881710, 'ayush@thewebtycoons.com'),
+(23, 23, 'Mr.', 'pharmacist 1', 'g', '11/131 ', 'Geeta colony', 'Delhi', 'India', '110031', 9811881710, 'ayush@thewebtycoons.com'),
+(24, 24, 'Mrs.', 'Shruti', 'Goel', '123', '123', 'dont deliver', 'India', '110033', 9350262307, 'info@thewebtycoons.com'),
+(25, 25, 'Mrs.', 'Shruti', 'Goel', '123', '123', 'dont deliver', 'India', '110033', 9350262307, 'info@thewebtycoons.com'),
+(26, 26, 'Mr.', 'Dheeraj', 'Aggarwal', 'D-55, Lord Krishna Road, Adarsh Nagar', 'D-55, Lord Krishna Road, Adarsh Nagar', 'Delhi', 'India', '110033', 9350262307, 'info@thewebtycoons.com'),
+(27, 27, 'Mr.', 'pharmacist 1', 'g', '11/131 ', 'Geeta colony', 'Delhi', 'India', '110031', 9811881710, 'ayush@thewebtycoons.com'),
+(28, 28, 'Mr.', 'pharmacist 1', 'g', '11/131 ', 'Geeta colony', 'Delhi', 'India', '110031', 9811881710, 'ayush@thewebtycoons.com'),
+(29, 29, 'Mr.', 'Ayush', 'test', 'Delhi', 'gali  no 18, Kailash Nagar', 'noida', 'India', '110032', 9811881710, 'ayush@thewebtycoons.com'),
+(30, 30, 'Mr.', 'Ayush', 'test', 'Delhi', 'gali  no 18, Kailash Nagar', 'noida', 'India', '110032', 9811881710, 'ayush@thewebtycoons.com'),
+(31, 31, 'Mr.', 'pharmacist 1', 'g', '11/131 ', 'Geeta colony', 'Delhi', 'India', '110031', 9811881710, 'ayush@thewebtycoons.com'),
+(32, 32, 'Mr.', 'Ayush', 'test', 'Delhi', 'gali  no 18, Kailash Nagar', 'noida', 'India', '110032', 9811881710, 'ayush@thewebtycoons.com'),
+(33, 33, 'Mr.', 'Ayush', 'test', 'Delhi', 'gali  no 18, Kailash Nagar', 'noida', 'India', '110032', 9811881710, 'ayush@thewebtycoons.com'),
+(34, 34, 'Mr.', 'Ayush', 'test', 'Delhi', 'gali  no 18, Kailash Nagar', 'noida', 'India', '110032', 9811881710, 'ayush@thewebtycoons.com'),
+(35, 35, 'Mr.', 'Ayush', 'test', 'Delhi', 'gali  no 18, Kailash Nagar', 'noida', 'India', '110032', 9811881710, 'ayush@thewebtycoons.com'),
+(36, 36, 'Mr.', 'Ayush', 'test', 'Delhi', 'gali  no 18, Kailash Nagar', 'noida', 'India', '110032', 9811881710, 'ayush@thewebtycoons.com'),
+(37, 37, 'Mr.', 'pharmacist 1', 'g', '11/131 ', 'Geeta colony', 'Delhi', 'India', '110031', 9811881710, 'ayush@thewebtycoons.com'),
+(38, 38, 'Mr.', 'pharmacist 1', 'g', '11/131 ', 'Geeta colony', 'Delhi', 'India', '110031', 9811881710, 'ayush@thewebtycoons.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_confirm`
+--
+
+CREATE TABLE `order_confirm` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `pay` enum('0','1') NOT NULL,
+  `order_status` int(11) NOT NULL,
+  `order_date` date NOT NULL,
+  `grand_total` float DEFAULT NULL,
+  `PaymentType` varchar(255) NOT NULL DEFAULT 'COD',
+  `grand_total_products` float DEFAULT NULL,
+  `reason` text,
+  `can_date` varchar(255) DEFAULT NULL,
+  `shippingcharges` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `order_confirm`
+--
+
+INSERT INTO `order_confirm` (`id`, `user_id`, `pay`, `order_status`, `order_date`, `grand_total`, `PaymentType`, `grand_total_products`, `reason`, `can_date`, `shippingcharges`) VALUES
+(14, 1, '0', -1, '2018-03-21', 270, 'COD', 230, 'I placed the wrong order', '22-03-2018', 150),
+(15, 1, '0', 1, '2018-03-27', 270, 'COD', 240, NULL, NULL, 0),
+(16, 1, '0', 1, '2018-03-27', 270, 'COD', 250, NULL, NULL, 0),
+(17, 1, '0', 1, '2018-03-28', 270, 'COD', 260, NULL, NULL, 150),
+(18, 1, '0', 1, '2018-03-28', 370, 'COD', 270, NULL, NULL, 0),
+(19, 1, '0', 1, '2018-03-28', 370, 'COD', 300, NULL, NULL, 0),
+(20, 1, '0', 1, '2018-03-28', 370, 'COD', 200, NULL, NULL, 0),
+(21, 1, '0', 1, '2018-03-28', 370, 'COD', 200, NULL, NULL, 0),
+(22, 1, '0', 1, '2018-03-30', 370, 'COD', 200, NULL, NULL, 0),
+(23, 1, '0', 1, '2018-03-30', 200, 'COD', 200, NULL, NULL, 0),
+(24, 15, '0', 1, '2018-06-04', 200, 'COD', 200, NULL, NULL, 50),
+(25, 15, '0', 1, '2018-06-05', 200, 'COD', 200, NULL, NULL, 50),
+(26, 15, '0', -1, '2018-06-12', 200, 'COD', 200, NULL, NULL, 50),
+(27, 1, '0', 1, '2018-06-16', 370, 'COD', 200, NULL, NULL, 0),
+(28, 1, '0', 1, '2018-06-16', 370, 'COD', 200, NULL, NULL, 0),
+(29, 1, '0', 1, '2018-06-16', 370, 'COD', 200, NULL, NULL, 150),
+(30, 1, '0', 1, '2018-06-16', 370, 'COD', 200, NULL, NULL, 150),
+(31, 1, '0', 1, '2018-06-16', 200, 'COD', 200, NULL, NULL, 0),
+(32, 1, '0', 1, '2018-06-16', 200, 'COD', 200, NULL, NULL, 150),
+(33, 1, '0', 1, '2018-06-16', 200, 'COD', 200, NULL, NULL, 150),
+(34, 1, '0', 1, '2018-06-16', 754, 'COD', 200, NULL, NULL, 150),
+(35, 1, '0', 1, '2018-06-16', 234, 'COD', 345, NULL, NULL, 150),
+(36, 1, '0', 1, '2018-06-16', 570, 'COD', 420, NULL, NULL, 150),
+(37, 1, '0', 1, '2018-06-19', 243, 'COD', 243, NULL, NULL, 0),
+(38, 1, '0', 1, '2018-06-19', 122, 'COD', 122, NULL, NULL, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_details`
+--
+
+CREATE TABLE `order_details` (
+  `id` int(11) NOT NULL,
+  `order_confirm_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `product_qty` int(11) NOT NULL,
+  `price_id` int(11) NOT NULL,
+  `price` float NOT NULL,
+  `p_b1` int(11) NOT NULL,
+  `prescription_id` varchar(255) NOT NULL DEFAULT '0',
+  `prescription_must` enum('0','1') NOT NULL,
+  `referralCode` text,
+  `order_status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `order_details`
+--
+
+INSERT INTO `order_details` (`id`, `order_confirm_id`, `product_id`, `product_qty`, `price_id`, `price`, `p_b1`, `prescription_id`, `prescription_must`, `referralCode`, `order_status`) VALUES
+(14, 14, 16, 1, 86, 122, 10, '0', '0', NULL, 0),
+(15, 15, 15, 1, 64, 1201, 1, '0', '0', NULL, 0),
+(16, 15, 18, 2, 122, 980, 1, 'whatsapp', '0', NULL, 0),
+(17, 15, 18, 2, 122, 980, 1, 'whatsapp', '0', NULL, 0),
+(18, 15, 1, 1, 75, 121, 75, 'whatsapp', '1', NULL, 0),
+(19, 16, 25, 1, 103, 15.73, 10, 'whatsapp', '0', NULL, 0),
+(20, 16, 18, 1, 122, 980, 1, 'whatsapp', '0', NULL, 0),
+(21, 17, 1, 2, 75, 121, 75, '0', '0', '', 0),
+(22, 17, 5, 1, 79, 600, 400, '0', '0', '', 0),
+(23, 17, 18, 1, 122, 980, 1, 'whatsapp', '0', '', 0),
+(24, 18, 18, 1, 122, 980, 1, '5', '1', '', 0),
+(25, 18, 18, 1, 122, 980, 1, '5', '1', 'MID-300320181', 0),
+(26, 20, 1, 1, 75, 121, 75, '0', '0', 'MID-300320181', 5),
+(27, 20, 18, 1, 122, 980, 1, '1', '1', 'PID-270320181', 0),
+(28, 20, 19, 1, 89, 10.98, 10, '1', '1', 'PID-270320181', 0),
+(29, 21, 18, 1, 122, 980, 1, '1', '1', 'MID-270320182', 0),
+(30, 22, 18, 1, 122, 980, 1, '1', '1', 'MID-270320182', 0),
+(31, 23, 18, 1, 122, 980, 1, '1', '1', 'PID-270320182', 0),
+(32, 23, 1, 1, 75, 121, 75, '0', '0', 'PID-270320182', 0),
+(33, 24, 8, 1, 66, 115, 8, '0', '0', '', 0),
+(34, 25, 52, 1, 0, 0, 0, '0', '0', '', 0),
+(35, 26, 3, 1, 74, 455, 75, '0', '0', '', 0),
+(36, 26, 18, 1, 122, 980, 1, '10', '1', '', 0),
+(37, 26, 16, 1, 86, 122, 10, '0', '0', 'MID-300320181', 0),
+(38, 27, 1, 1, 75, 121, 75, '0', '0', '', 0),
+(39, 28, 16, 1, 86, 122, 10, '0', '0', 'MID-300320181', 0),
+(40, 29, 17, 1, 85, 97, 100, '0', '0', '', 0),
+(41, 29, 2, 1, 76, 299, 200, '0', '0', '', 0),
+(42, 30, 2, 1, 76, 299, 200, '0', '0', '', 0),
+(43, 30, 1, 1, 75, 121, 75, '0', '0', '', 0),
+(44, 31, 16, 1, 86, 122, 10, '0', '0', 'MID-300320181', 0),
+(45, 31, 5, 1, 79, 600, 400, '0', '0', '', 0),
+(46, 32, 4, 1, 73, 236, 200, '0', '0', '', 0),
+(47, 32, 7, 1, 71, 148, 72, '0', '0', '', 0),
+(48, 33, 2, 1, 76, 299, 200, '0', '0', '', 0),
+(49, 33, 3, 1, 74, 455, 75, '0', '0', '', 0),
+(50, 34, 2, 1, 76, 299, 200, '0', '0', '', 0),
+(51, 34, 3, 1, 74, 455, 75, '0', '0', '', 0),
+(52, 35, 2, 1, 76, 299, 200, '0', '0', '', 0),
+(53, 35, 7, 1, 71, 148, 72, '0', '0', '', 0),
+(54, 36, 2, 1, 76, 299, 200, '0', '0', '', 0),
+(55, 36, 1, 1, 75, 121, 75, '0', '0', '', 0),
+(56, 37, 1, 1, 75, 121, 75, '0', '0', '', 0),
+(57, 37, 16, 1, 86, 122, 10, '0', '0', 'MID-300320181', 0),
+(58, 38, 16, 1, 86, 122, 10, '0', '0', 'MID-300320181', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `packing`
+--
+
+CREATE TABLE `packing` (
+  `id` int(11) NOT NULL,
+  `type` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `sort` int(11) NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `packing`
+--
+
+INSERT INTO `packing` (`id`, `type`, `name`, `sort`, `status`) VALUES
+(1, 1, 'Strips', 1, 1),
+(2, 1, 'Syringes', 2, 1),
+(3, 1, 'Device', 3, 1),
+(4, 1, 'Kit', 4, 1),
+(5, 1, 'Wipes', 5, 1),
+(6, 1, 'Diapers', 6, 1),
+(7, 1, 'ml Shampoo', 7, 1),
+(8, 2, 'Packet', 1, 1),
+(9, 2, 'Box', 2, 1),
+(10, 2, 'Bottle', 3, 1),
+(12, 1, 'ml Syrup', 1, 1),
+(13, 2, 'Strips', 1, 1),
+(14, 2, 'Tablet ', 1, 1),
+(15, 1, 'Tablet ', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pharmacist`
+--
+
+CREATE TABLE `pharmacist` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `city` text NOT NULL,
+  `state` varchar(255) NOT NULL,
+  `medicine` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pharmacist`
+--
+
+INSERT INTO `pharmacist` (`id`, `name`, `city`, `state`, `medicine`) VALUES
+(1, 'abc', 'Delhi', 'India', '@16@,@18@');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pharmacist_products`
+--
+
+CREATE TABLE `pharmacist_products` (
+  `id` int(11) NOT NULL,
+  `pharmacist_id` int(11) NOT NULL,
+  `p_id` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pincodes`
+--
+
+CREATE TABLE `pincodes` (
+  `id` int(11) NOT NULL,
+  `number` int(11) NOT NULL,
+  `shippingcharges` int(11) NOT NULL,
+  `status` enum('1','0') NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pincodes`
+--
+
+INSERT INTO `pincodes` (`id`, `number`, `shippingcharges`, `status`) VALUES
+(1, 110031, 0, '1'),
+(2, 110032, 150, '1'),
+(3, 110021, 50, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `posts`
+--
+
+CREATE TABLE `posts` (
+  `id` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `content` text NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`id`, `title`, `content`, `link`, `timestamp`) VALUES
+(1, 'Drag and drop image upload using jQuery,AJAX, and PHP', 'Drag and drop is a simple way to allow the users to upload their files by dropping to the container. Nowadays most websites allow uploading using both drag and drop and the file browse e.g. PushBullet, Facebook, SlideShare, etc.', 'http://makitweb.com/drag-drop-image-upload-jquery-ajax-php/', '2017-12-28 12:47:59'),
+(2, 'How to verify a domain in MailChimp', 'This tutorial, guide how to you can verify your domain in Mailchimp. Whenever you try to send the newsletter with an email which contains domain name for example – newsletter@makitweb.com . In this case, you need to verify it and authenticate your domain.\n\nIn this tutorial, I am assuming that you have a MailChimp account, if you haven’t then you can signup for it and a website.', 'http://makitweb.com/how-to-verify-domain-mailchimp/', '2016-07-05 20:19:04'),
+(3, 'How to read RSS feeds using PHP', 'In this tutorial, I will show how you can use PHP to read RSS feeds of the websites and showing recent post lists using it.\nRSS (Rich Site Summary) is a format which is used in many websites which allow web publisher to syndicates their latest posts or data automatically. It also benefits to people who want to receive latest posts updates from their favorite websites.', 'http://makitweb.com/how-to-read-rss-feeds-using-php/', '2017-12-28 12:49:33'),
+(4, 'Like unlike using AJAX, jQuery and PHP', 'Like unlike functionality used in many websites to know the user response on their content or article.\n\nIn this tutorial, I will add like and unlike buttons within the content and handle with jQuery and PHP.\n\n', 'http://makitweb.com/like-unlike-using-ajax-jquery-php/', '2017-12-28 12:50:26'),
+(5, 'File handling in Python', 'We can open the file in a number of ways according to need For example - Writing, Reading, Adding more content to file, etc. Its file handling functions are little similar to C language.', 'http://makitweb.com/file-handling-python/', '2016-07-06 20:17:14'),
+(6, 'What is MongoDB? and Windows Installation', 'It is a quick tutorial on MongoDB and how you can install it on your Windows OS. We will also learn some basic commands in MongoDB for example, creating and dropping a Database, Creation of a collection and some more operations related to the collection.', 'http://makitweb.com/what-is-mongodb-and-windows-installation/', '2016-07-06 20:17:19'),
+(7, 'Modules and Controllers in AngularJS', 'A module is a container which defines the functionality of the application which is represented by the ng-app directive. It helps us to define services, directives, filters, etc.\nAnd The role of controllers in Angular is to expose data to our view via $scope, and controllers contain logic to enhance view behavior.', 'http://makitweb.com/modules-and-controllers-in-angularjs/', '2016-07-06 20:17:43'),
+(8, 'jsFiddle Snippets Embedding to your Web Page', 'jsfiddle generally used for sharing, saving and embedding HTML, CSS, and JavaScript snippets.\r\njsfiddle allows us to add code snippet within our web pages and we can able to customize look and feel of code snippet like changing the visual theme, font color, code background, menu background.\r\n\r\njsfiddle will show JavaScript, HTML, CSS and Result tabs by default we can some of its tab if their no use of it by check and uncheck the checkbox follow with tab name. For example, if you are making code snippet in which we have only used HTML and CSS section and not done any JavaScript work in that case there is no need of display JavaScript tab with your web page.', 'http://makitweb.com/jsfiddle-snippets-embedding-to-your-web-page/', '2016-07-06 20:18:07'),
+(9, 'What is AngularJS ?', 'AngularJS is a JavaScript MVC framework  developed by Google that lets you build well structured, easily testable,  declarative and maintainable front-end applications which provides solutions to  standard infrastructure concerns.', 'http://makitweb.com/what-is-angularjs/', '2016-07-06 20:18:44'),
+(10, 'Node.js Windows installation', 'Node.js is a very powerful JavaScript-based framework/platform built on Google Chrome\'s JavaScript V8 Engine which makes it possible to run Javascript on the server side. It is used to develop I/O intensive web applications like video streaming sites, single-page applications, and other web applications. It is awesome for real time stuff for example if we use PHP for this then it is not good for this because it consumes a lot of memory. Using NPM — a tool that makes installing and managing Node modules — it’s quite easy to add many useful tools to your web development toolkit.', 'http://makitweb.com/node-js-windows-installation/', '2016-07-06 20:19:08'),
+(11, 'Loop control statements in Python', 'Loop control statements are used to handling the flow of the loop e.g. terminate the loop or skip some block when the particular condition occurs.', 'http://makitweb.com/loop-control-statements-python/', '2017-12-28 12:51:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `price`
+--
+
+CREATE TABLE `price` (
+  `id` int(11) NOT NULL,
+  `p_id` int(11) NOT NULL,
+  `p_b1` int(11) NOT NULL,
+  `price` float NOT NULL,
+  `orgprice` float NOT NULL,
+  `price_per` float NOT NULL,
+  `status` enum('1','0') NOT NULL,
+  `p_menu` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `price`
+--
+
+INSERT INTO `price` (`id`, `p_id`, `p_b1`, `price`, `orgprice`, `price_per`, `status`, `p_menu`) VALUES
+(58, 11, 10, 350, 395, 11, '1', 2),
+(59, 11, 25, 599, 625, 4, '1', 2),
+(60, 11, 50, 996, 1095, 9, '1', 2),
+(61, 12, 1, 188, 132, 9, '1', 2),
+(62, 13, 1, 1890, 1890, 9, '1', 2),
+(63, 14, 1, 3299, 4345, 9, '1', 2),
+(64, 15, 1, 1201, 1349, 9, '1', 2),
+(65, 8, 56, 712, 749, 9, '1', 6),
+(66, 8, 8, 115, 115, 9, '1', 6),
+(67, 8, 20, 256, 269, 9, '1', 6),
+(68, 8, 26, 479, 499, 9, '1', 6),
+(69, 8, 80, 997, 1049, 9, '1', 6),
+(70, 8, 152, 1899, 1999, 9, '1', 6),
+(71, 7, 72, 148, 185, 9, '1', 6),
+(72, 4, 500, 454, 499, 9, '1', 6),
+(73, 4, 200, 236, 253, 9, '1', 6),
+(74, 3, 75, 455, 499, 9, '1', 6),
+(75, 1, 75, 121, 199, 9, '1', 6),
+(76, 2, 200, 299, 399, 9, '1', 6),
+(77, 6, 400, 599, 699, 9, '1', 6),
+(78, 6, 1000, 1099, 1199, 9, '1', 6),
+(79, 5, 400, 600, 799, 9, '1', 6),
+(81, 9, 1, 1932, 2100, 8, '1', 2),
+(83, 10, 1, 2100, 5000, 58, '1', 2),
+(84, 17, 200, 200, 215, 7, '1', 3),
+(85, 17, 100, 97, 114, 15, '1', 3),
+(86, 16, 10, 122, 123, 1, '1', 1),
+(89, 19, 10, 10.98, 10.98, 0, '1', 1),
+(90, 20, 10, 11.27, 11.27, 0, '1', 1),
+(91, 22, 10, 11.7, 11.7, 0, '1', 1),
+(92, 23, 30, 38.56, 38.56, 0, '1', 1),
+(93, 31, 10, 19, 19, 0, '1', 1),
+(94, 32, 10, 19.12, 19.12, 0, '1', 1),
+(95, 34, 10, 21.13, 21.13, 0, '1', 1),
+(96, 35, 10, 21.8, 21.8, 0, '1', 1),
+(97, 21, 10, 11.27, 11.27, 0, '1', 1),
+(98, 26, 10, 16.37, 16.37, 0, '1', 1),
+(99, 27, 10, 17.27, 17.27, 0, '1', 1),
+(100, 28, 10, 17.67, 17.67, 0, '1', 1),
+(101, 30, 10, 18.46, 18.46, 0, '1', 1),
+(102, 24, 10, 42, 42, 0, '1', 1),
+(103, 25, 10, 15.73, 15.73, 0, '1', 1),
+(104, 29, 10, 18, 18, 0, '1', 1),
+(105, 33, 10, 19.5, 19.5, 0, '1', 1),
+(106, 36, 10, 11.55, 11.55, 0, '1', 1),
+(107, 37, 10, 18.15, 18.15, 0, '1', 1),
+(108, 38, 10, 18.47, 18.47, 0, '1', 1),
+(109, 39, 10, 20.51, 20.51, 0, '1', 1),
+(110, 40, 10, 22.11, 22.11, 0, '1', 1),
+(111, 41, 10, 24, 24, 0, '1', 1),
+(112, 42, 10, 25.27, 25.27, 0, '1', 1),
+(113, 43, 10, 76.5, 76.5, 0, '1', 1),
+(114, 44, 10, 26.5, 26.5, 0, '1', 1),
+(115, 45, 10, 27, 27, 0, '1', 1),
+(116, 46, 10, 31.38, 31.38, 0, '1', 1),
+(117, 47, 10, 32, 32, 0, '1', 1),
+(118, 48, 10, 32.95, 32.95, 0, '1', 1),
+(119, 49, 10, 34.48, 34.48, 0, '1', 1),
+(120, 50, 10, 36.57, 36.57, 0, '1', 1),
+(121, 51, 10, 36.67, 36.67, 0, '1', 1),
+(122, 18, 1, 980, 1000, 2, '1', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
+  `menu` varchar(555) NOT NULL,
+  `sub_menu` varchar(555) NOT NULL,
+  `sub_sub_menu` varchar(555) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `company_name` int(11) DEFAULT NULL,
+  `link` varchar(555) NOT NULL,
+  `brand` varchar(255) NOT NULL,
+  `discount` varchar(255) NOT NULL,
+  `form` varchar(255) NOT NULL,
+  `uses` varchar(255) NOT NULL,
+  `age` varchar(255) NOT NULL,
+  `gender` varchar(255) NOT NULL,
+  `text` varchar(5555) NOT NULL,
+  `Products_name` varchar(5555) NOT NULL,
+  `ban_img` varchar(5555) NOT NULL,
+  `img` varchar(5555) NOT NULL,
+  `enum` int(11) NOT NULL,
+  `sort` int(11) NOT NULL,
+  `status` enum('0','1') NOT NULL,
+  `prescription` enum('0','1') NOT NULL,
+  `dis_products` enum('0','1') NOT NULL,
+  `refundable` enum('0','1') NOT NULL,
+  `p_b` varchar(255) NOT NULL,
+  `p_b1` varchar(255) NOT NULL,
+  `solt` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `menu`, `sub_menu`, `sub_sub_menu`, `name`, `company_name`, `link`, `brand`, `discount`, `form`, `uses`, `age`, `gender`, `text`, `Products_name`, `ban_img`, `img`, `enum`, `sort`, `status`, `prescription`, `dis_products`, `refundable`, `p_b`, `p_b1`, `solt`) VALUES
+(1, '6', '10', '8', 'Tedibar Soap', 0, '', '106,110', '1', '2,3', '2,3', '1', '3', '', '', '', 'images/info/img_2018-02-08-11-37-28_5a7be9208e924.png', 3, 1, '1', '0', '0', '0', '10', '7', 0),
+(2, '6', '10', '8', 'Chicco Natural Sensation Baby Bath Oil', 0, '', '111', '1', '', '', '', '', '', '', '', 'images/info/img_2018-02-08-11-50-31_5a7bec2fc69bc.png', 3, 2, '1', '0', '0', '0', '10', '7', 0),
+(3, '6', '10', '8', 'Chicco Baby Moments Soap Pack of 3', 0, '', '111', '2', '', '', '', '', '', '', '', 'images/info/img_2018-02-08-12-00-34_5a7bee8a51590.png', 3, 3, '1', '0', '0', '0', '10', '7', 0),
+(4, '6', '10', '8', 'Pigeon Gentle Baby Shampoo', 0, '', '111', '', '', '', '', '', '', '', '', 'images/info/img_2018-02-08-12-04-26_5a7bef7283af2.png', 3, 4, '1', '0', '0', '0', '10', '7', 0),
+(5, '6', '10', '9', 'Similac Advance Infant Formula Stage 1', 0, '', '111', '', '', '', '', '', '', '', '', 'images/info/img_2018-02-08-12-06-34_5a7beff220967.png', 3, 1, '1', '0', '0', '0', '9', '7', 0),
+(6, '6', '10', '9', 'Similac Isomil Soy Infant Formula', 0, '', '111', '', '', '', '', '', '', '', '', 'images/info/img_2018-02-08-12-07-45_5a7bf039734f7.png', 3, 2, '1', '0', '0', '0', '9', '7', 0),
+(7, '6', '10', '8', 'Himalaya Gentle Baby Wipes', 0, '', '106', '', '', '', '', '', '', '', '', 'images/info/img_2018-02-08-12-09-07_5a7bf08b8541d.png', 3, 1, '1', '0', '0', '0', '8', '5', 0),
+(8, '6', '10', '10', 'Pampers Baby Dry Pants Diaper M', 0, '', '107', '', '', '', '', '', '', '', '', 'images/info/img_2018-02-08-12-10-19_5a7bf0d337555.png', 3, 2, '1', '0', '0', '0', '8', '6', 0),
+(9, '2', '', '', 'A&D Precision Personal Weighing Scale with Step ON Technology', 14, '', '', '', '', '', '', '', '', '', '', 'images/info/img_2018-02-15-12-33-51_5a8530d75455a.png', 1, 1, '1', '0', '1', '1', '9', '3', 0),
+(10, '2', '', '', 'Oxy99 Finger Tip Pulse Oximeter', 15, '', '', '', '', '', '', '', '', '', '', 'images/info/img_2018-02-15-13-23-43_5a853c87f24f0.png', 1, 1, '1', '0', '0', '0', '9', '3', 0),
+(11, '2', '', '', 'One Touch Select Test Strip', 16, '', '', '', '', '', '', '', '', '', '', 'images/info/img_2018-02-15-13-25-44_5a853d001be52.png', 1, 1, '1', '0', '0', '0', '8', '1', 0),
+(12, '2', '', '', 'Smart Care BP Monitor Rubber Bag Latex', 17, '', '', '', '', '', '', '', '', '', '', 'images/info/img_2018-02-15-13-26-41_5a853d39d2568.png', 1, 1, '1', '0', '0', '0', '9', '3', 0),
+(13, '2', '', '', 'Perfecxa B25 BP Monitor', 18, '', '', '', '', '', '', '', '', '', '', 'images/info/img_2018-02-15-13-29-54_5a853dfae2ae9.png', 1, 1, '1', '0', '0', '0', '9', '3', 0),
+(14, '2', '', '', 'Omron Hem-7132-IN BP Monitor', 19, '', '', '', '', '', '', '', '', '', '', 'images/info/img_2018-02-15-13-31-08_5a853e44cc061.png', 1, 1, '1', '0', '0', '0', '9', '3', 0),
+(15, '2', '', '', 'Accu-Chek Softclix Lancing Device with 50 Active Strips & 25 Lancets', 20, '', '', '', '', '', '', '', '', '', '', 'images/info/img_2018-02-15-13-32-35_5a853e9bca0cc.png', 1, 1, '1', '0', '0', '0', '8', '4', 0),
+(16, '1', '8', '3', 'Nise 100mg Tablet', 18, '', '', '', '', '', '', '', '', '', '', '', 3, 1, '1', '0', '0', '0', '13', '15', 14),
+(17, '3', '5', '', 'Neeri Syrup', 22, '', '', '', '', '', '', '', '', '', '', 'images/info/img_2018-02-20-12-21-43_5a8bc57f94fb6.png', 2, 1, '1', '0', '0', '0', '10', '12', 14),
+(18, '1', '8', '3', 'Oritus D Syrup', 14, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '10', '4', 17),
+(19, '1', '8', '3', 'BIOFORMIN PLUS 80MG', 276, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 22),
+(20, '1', '8', '3', 'PIO 15MG TABLET', 204, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(21, '1', '8', '4', 'PIO 15MG TABLET', 204, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(22, '1', '8', '3', 'PIOGLITAZONE 15MG TABLET', 176, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(23, '1', '8', '3', 'PIOZULIN 15MG TABLET', 324, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(24, '1', '8', '5', 'PIOSYS 15MG TABLET', 204, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(25, '1', '8', '5', 'ZIPIO 15MG TABLET', 230, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(26, '1', '8', '4', 'PIO G 15MG TABLET', 314, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(27, '1', '8', '4', 'PRECITROL 15MG TABLET', 209, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(28, '1', '8', '4', 'ADIZONE 15MG TABLET', 257, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(29, '1', '9', '6', 'GLITO 15MG TABLET', 267, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(30, '1', '8', '4', 'DIAVISTA 15MG TABLET', 341, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(31, '1', '8', '3', 'PIOLI 15MG TABLET', 127, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(32, '1', '8', '3', 'PIONEER 15MG TABLET', 269, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(33, '1', '9', '6', 'LOGIT 15MG TABLET', 316, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(34, '1', '8', '3', 'POKR 15MG TABLET', 123, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(35, '1', '8', '3', 'GLUFIT 15MG TABLET', 253, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 18),
+(36, '1', '8', '3', 'PIOGLITAZONE 30MG TABLET', 176, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(37, '1', '8', '3', 'PIOPIL 30MG TABLET', 286, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(38, '1', '8', '3', 'P GLITZ 30MG TABLET', 279, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(39, '1', '8', '3', 'PIOZED 30MG TABLET', 327, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(40, '1', '8', '3', 'PIO 30MG TABLET', 204, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(41, '1', '8', '3', 'K-PIO 30MG TABLET', 256, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(42, '1', '8', '3', 'PLUM 30MG TABLET', 282, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(43, '1', '8', '3', 'PIOSYS 30MG TABLET', 204, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(44, '1', '8', '3', 'ZIPIO 30MG TABLET', 230, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(45, '1', '8', '3', 'PYE 30MG TABLET', 334, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(46, '1', '8', '3', 'PIO G 30MG TABLET', 314, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(47, '1', '8', '3', 'PRECITROL 30MG TABLET', 209, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(48, '1', '8', '3', 'POKR 30MG TABLET', 123, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(49, '1', '8', '3', 'PZONE 30MG TABLET', 194, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(50, '1', '8', '3', 'PIOKAP 30MG TABLET', 185, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(51, '1', '8', '3', 'PIOTIS 30MG TABLET', 126, '', '', '', '', '', '', '', '', '', '', '', 3, 0, '1', '1', '0', '0', '13', '15', 19),
+(52, '1', '8', '3', 'crocin advance', 14, '', '', '1', '1', '1', '1', '1', '', '', '', '', 3, 0, '1', '0', '0', '0', '13', '1', 14);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products_added`
+--
+
+CREATE TABLE `products_added` (
+  `id` int(100) NOT NULL,
+  `username` text NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `product_name` varchar(255) NOT NULL,
+  `product_qty` int(11) NOT NULL,
+  `price_id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `prescription_id` varchar(255) NOT NULL DEFAULT '0',
+  `prescription_must` enum('0','1') NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `products_added`
+--
+
+INSERT INTO `products_added` (`id`, `username`, `product_id`, `product_name`, `product_qty`, `price_id`, `date`, `prescription_id`, `prescription_must`) VALUES
+(33, 'qad2ug1chejd92h8fk0b5dd912', 16, 'Nise 100mg Tablet', 1, 86, '2018-03-26', '0', '0'),
+(34, 'qad2ug1chejd92h8fk0b5dd912', 19, 'BIOFORMIN PLUS 80MG', 1, 89, '2018-03-26', '0', '0'),
+(69, 'uk4hup1ltr7l1f6d1vfgpm3fq0', 17, 'Neeri Syrup', 1, 85, '2018-04-06', '0', '0'),
+(70, 'e1538fk0pu2ha6k93bet391js6', 16, 'Nise 100mg Tablet', 2, 86, '2018-04-09', '0', '0'),
+(65, 'kjb9ps2fb4en5pmdrcv85tpae0', 1, 'Tedibar Soap', 2, 75, '2018-03-29', '0', '0'),
+(74, 'upi5av7hulkodpdse42elq3sk1', 16, 'Nise 100mg Tablet', 1, 86, '2018-04-09', '0', '0'),
+(75, 'r8gm0o3jhln8pldi98pipc6cj2', 16, 'Nise 100mg Tablet', 1, 86, '2018-04-09', '0', '0'),
+(126, 'sngtpn3ema5ermkm6fgaojm7p2', 16, 'Nise 100mg Tablet', 3, 86, '2018-06-20', '0', '0'),
+(78, '6oigpk11k082jt5s6585ha9ug3', 16, 'Nise 100mg Tablet', 4, 86, '2018-04-12', '0', '0'),
+(79, 'manish.s@thewebtycoons.com', 16, 'Nise 100mg Tablet', 1, 86, '2018-04-19', '0', '0'),
+(81, 'renu@thewebtycoons.com', 2, 'Chicco Natural Sensation Baby Bath Oil', 1, 76, '2018-04-28', '0', '0'),
+(82, 'i6bas38jv42rlsn0g3ocs7m015', 2, 'Chicco Natural Sensation Baby Bath Oil', 1, 76, '2018-04-28', '0', '0'),
+(83, '', 2, 'Chicco Natural Sensation Baby Bath Oil', 1, 76, '2018-06-04', '0', '0'),
+(84, '', 4, 'Pigeon Gentle Baby Shampoo', 1, 73, '2018-06-04', '0', '0'),
+(85, '', 3, 'Chicco Baby Moments Soap Pack of 3', 1, 74, '2018-06-04', '0', '0'),
+(86, '', 1, 'Tedibar Soap', 1, 75, '2018-06-04', '0', '0'),
+(99, 'eca2ibrej92bc649b2ip1n1i70', 24, 'PIOSYS 15MG TABLET', 1, 102, '2018-06-13', '0', '0'),
+(97, 'vit0qcpcara17t3j52iq41d5p7', 16, 'Nise 100mg Tablet', 2, 86, '2018-06-12', '0', '0'),
+(93, 'e4o3mlo1vt62h3vfi3t9l0vgh0', 1, 'Tedibar Soap', 1, 75, '2018-06-06', '0', '0'),
+(94, 'sge9qdpuu0j3hci793o2rl1386', 2, 'Chicco Natural Sensation Baby Bath Oil', 1, 76, '2018-06-11', '0', '0'),
+(96, '71kkfdqjdcsanau8mg6tr3alg1', 3, 'Chicco Baby Moments Soap Pack of 3', 1, 74, '2018-06-12', '0', '0'),
+(100, 'info@thewebtycoons.com', 16, 'Nise 100mg Tablet', 1, 86, '2018-06-14', '0', '0'),
+(122, '64aa1gbqd8f4g95i6jb8por7j4', 52, 'crocin advance', 1, 0, '2018-06-18', '0', '0'),
+(127, 'ayush@thewebtycoons.com', 1, 'Tedibar Soap', 1, 75, '2018-06-22', '0', '0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `room`
+--
+
+CREATE TABLE `room` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `no_rooms` int(11) NOT NULL,
+  `img` text NOT NULL,
+  `sorttext` text NOT NULL,
+  `text` text NOT NULL,
+  `facilities` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  `start` date NOT NULL,
+  `end` date NOT NULL,
+  `client_id` int(11) NOT NULL,
+  `approve` int(11) NOT NULL,
+  `home_display` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `room`
+--
+
+INSERT INTO `room` (`id`, `name`, `type`, `no_rooms`, `img`, `sorttext`, `text`, `facilities`, `price`, `status`, `start`, `end`, `client_id`, `approve`, `home_display`) VALUES
+(4, '', 'DELUXE ROOM', 3, 'images/room/img_2017-12-12-07-39-43_5a2f79afee203.jpeg', '<h5>Deluxe Room</h5>\r\n									<p> Semper ac dolor vitae accumsan. interdum hendrerit lacinia. </p>\r\n									<p> Phasellus accumsan urna vitae molestie interdum. </p>', '<p>Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor. Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque.</p>\r\n', '24,4,12,13,17,18,19,20', 2000, 1, '2017-12-12', '2017-12-13', 0, 1, 1),
+(5, '', 'SUPER DELUXE ROOM', 1, 'images/room/img_2017-12-22-10-30-56_5a3cd0d0842c6.jpeg', '<p>Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero.</p>\r\n', '<p>w</p>\r\n', '24,4,12,13', 3000, 1, '2017-12-12', '2017-12-13', 0, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `room_img`
+--
+
+CREATE TABLE `room_img` (
+  `id` int(11) NOT NULL,
+  `room_id` int(11) NOT NULL,
+  `img` text NOT NULL,
+  `sort` int(11) NOT NULL,
+  `status` enum('1','0') NOT NULL,
+  `gallery_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `room_img`
+--
+
+INSERT INTO `room_img` (`id`, `room_id`, `img`, `sort`, `status`, `gallery_id`) VALUES
+(30, 4, 'images/room_img/cS-16.jpg', 0, '1', 0),
+(31, 4, 'images/room_img/cS-18.jpg', 0, '1', 0),
+(32, 0, 'images/gallery/Chrysanthemum.jpg', 0, '1', 1),
+(33, 0, 'images/gallery/Desert.jpg', 0, '1', 1),
+(34, 0, 'images/gallery/Hydrangeas.jpg', 0, '1', 1),
+(35, 0, 'images/gallery/Jellyfish.jpg', 0, '1', 1),
+(36, 0, 'images/gallery/Koala.jpg', 0, '1', 1),
+(37, 0, 'images/gallery/Lighthouse.jpg', 0, '1', 1),
+(38, 0, 'images/gallery/Penguins.jpg', 0, '1', 1),
+(39, 0, 'images/gallery/Tulips.jpg', 0, '1', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `slider`
+--
+
+CREATE TABLE `slider` (
+  `id` int(11) NOT NULL,
+  `img` text NOT NULL,
+  `text1` varchar(255) NOT NULL,
+  `text2` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `sort` int(11) NOT NULL,
+  `status` enum('0','1') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `social_links`
+--
+
+CREATE TABLE `social_links` (
+  `id` int(11) NOT NULL,
+  `social` varchar(5555) NOT NULL,
+  `social_link` varchar(5555) NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `social_links`
+--
+
+INSERT INTO `social_links` (`id`, `social`, `social_link`, `status`) VALUES
+(1, 'linkedin', 'https://www.linkedin.com/', 1),
+(2, 'twitter', 'https://twitter.com/', 1),
+(3, 'facebook', 'https://www.facebook.com/', 1),
+(7, 'Youtube', 'Youtube', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `solt`
+--
+
+CREATE TABLE `solt` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `text` longtext NOT NULL,
+  `sort` int(11) NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `solt`
+--
+
+INSERT INTO `solt` (`id`, `name`, `text`, `sort`, `status`) VALUES
+(14, 'Nimesulide (50mg)', '<div class=\"item\" style=\"box-sizing: border-box; color: rgb(102, 102, 102); font-family: &quot;Clear Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 16px;\">\r\n<div class=\"row\" style=\"box-sizing: border-box; margin-top: 10px; margin-left: -15px; margin-right: -15px;\">\r\n<div class=\"col-xs-12 col-sm-6 col-md-7\" style=\"box-sizing: border-box; position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; float: left; width: 746.656px;\">\r\n<h1>Nimesulide</h1>\r\n</div>\r\n\r\n<div class=\"col-xs-12 col-sm-6 col-md-5 right\" style=\"box-sizing: border-box; position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; float: left; width: 533.328px;\">&nbsp;</div>\r\n</div>\r\n</div>\r\n\r\n<div class=\"row\" style=\"box-sizing: border-box; margin-top: 10px; margin-left: -15px; margin-right: -15px; color: rgb(102, 102, 102); font-family: &quot;Clear Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 16px;\">\r\n<div class=\"col-md-4\" style=\"box-sizing: border-box; position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; float: left; width: 426.656px;\">\r\n<h2>INFORMATION ABOUT NIMESULIDE</h2>\r\n\r\n<div class=\"text-small\" style=\"box-sizing: border-box; font-size: 0.875rem;\">\r\n<h3>Nimesulide uses</h3>\r\n\r\n<div class=\"text-overflow-control\" style=\"box-sizing: border-box; word-wrap: break-word;\">Nimesulide is used in the treatment of&nbsp;<a href=\"https://www.1mg.com/diseases/fever-191\" style=\"box-sizing: border-box; text-decoration-line: none; background: 0px 0px; color: rgb(45, 188, 181) !important;\">fever</a>,&nbsp;<a href=\"https://www.1mg.com/diseases/headache-192\" style=\"box-sizing: border-box; text-decoration-line: none; background: 0px 0px; color: rgb(45, 188, 181) !important;\">headache</a>, dental pain, postoperative pain, pain during menstruation, arthralgia, muscle pain,&nbsp;<a href=\"https://www.1mg.com/diseases/osteoarthritis-198\" style=\"box-sizing: border-box; text-decoration-line: none; background: 0px 0px; color: rgb(45, 188, 181) !important;\">osteoarthritis</a>,&nbsp;<a href=\"https://www.1mg.com/diseases/rheumatoid-arthritis-213\" style=\"box-sizing: border-box; text-decoration-line: none; background: 0px 0px; color: rgb(45, 188, 181) !important;\">rheumatoid arthritis</a>,&nbsp;<a href=\"https://www.1mg.com/diseases/ankylosing-spondylitis-212\" style=\"box-sizing: border-box; text-decoration-line: none; background: 0px 0px; color: rgb(45, 188, 181) !important;\">ankylosing spondylitis</a>, and&nbsp;<a href=\"https://www.1mg.com/diseases/gout-398\" style=\"box-sizing: border-box; text-decoration-line: none; background: 0px 0px; color: rgb(45, 188, 181) !important;\">gout</a>.<br />\r\nIt should not be used in children below 12 years of age.</div>\r\n\r\n<h3>How nimesulide works</h3>\r\n\r\n<div style=\"box-sizing: border-box;\">Nimesulide is a non-steroidal anti-inflammatory drug (NSAID). It works by blocking the release of certain chemical messengers that cause fever, pain, and inflammation (redness and swelling).</div>\r\n\r\n<h3>Common side effects of nimesulide</h3>\r\n\r\n<div style=\"box-sizing: border-box;\">Abdominal pain, Constipation, Diarrhoea, Epigastric pain, Flatulence, Nausea, Vomiting, Indigestion</div>\r\n</div>\r\n</div>\r\n</div>\r\n', 1, 1),
+(15, 'Nimesulide (100mg)', '', 2, 1),
+(16, 'Nimesulide (DS)', '', 3, 1),
+(17, 'Chlorpheniramine (2mg/5ml) + Dextromethorphan (10mg/5ml) + Menthol (1.5mg/5ml) + Phenylephrine (5mg/5ml)', '', 2, 1),
+(18, 'Pioglitazone(15 mg)', '', 1, 1),
+(19, 'Pioglitazone(30 mg)', '', 1, 1),
+(20, 'Metformin(500 mg)', '', 1, 1),
+(21, 'GLICLAZIDE 60MG', '', 1, 1),
+(22, 'GLICLAZIDE 80MG', '', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sub_menu`
+--
+
+CREATE TABLE `sub_menu` (
+  `id` int(11) NOT NULL,
+  `menu` varchar(555) NOT NULL,
+  `sub_menu` varchar(555) NOT NULL,
+  `link` varchar(555) NOT NULL,
+  `text` varchar(5555) NOT NULL,
+  `Products_name` varchar(5555) NOT NULL,
+  `ban_img` varchar(5555) NOT NULL,
+  `img` varchar(5555) NOT NULL,
+  `enum` enum('sub_menu') NOT NULL,
+  `sort` int(11) NOT NULL,
+  `status` enum('0','1') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sub_menu`
+--
+
+INSERT INTO `sub_menu` (`id`, `menu`, `sub_menu`, `link`, `text`, `Products_name`, `ban_img`, `img`, `enum`, `sort`, `status`) VALUES
+(5, '3', 'Contraceptives', 'product', '', '', '', '', 'sub_menu', 1, '1'),
+(6, '3', 'Pain Relief', 'product', '', '', '', '', 'sub_menu', 1, '1'),
+(8, '1', 'Product 1', '0', '', '', '', '', 'sub_menu', 1, '1'),
+(9, '1', 'Product 2', '0', '', '', '', '', 'sub_menu', 2, '1'),
+(10, '6', 'Baby & Child Care', '0', '', '', '', '', 'sub_menu', 1, '1'),
+(11, '6', 'Skin Care', '0', '', '', '', '', 'sub_menu', 2, '1'),
+(12, '6', 'Hair Care', '0', '', '', '', '', 'sub_menu', 3, '1'),
+(13, '6', 'Sexual Wellness', '0', '', '', '', '', 'sub_menu', 4, '1'),
+(14, '6', 'Oral Care', 'product', '', '', '', '', 'sub_menu', 5, '1'),
+(15, '6', 'Elderly Care', '0', '', '', '', '', 'sub_menu', 6, '1'),
+(16, '6', 'WOMEN CARE', '0', '', '', '', '', 'sub_menu', 7, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sub_sub_menu`
+--
+
+CREATE TABLE `sub_sub_menu` (
+  `id` int(11) NOT NULL,
+  `menu` varchar(555) NOT NULL,
+  `sub_menu` varchar(555) NOT NULL,
+  `sub_sub_menu` varchar(555) NOT NULL,
+  `link` varchar(555) NOT NULL,
+  `text` varchar(5555) NOT NULL,
+  `Products_name` varchar(5555) NOT NULL,
+  `ban_img` varchar(5555) NOT NULL,
+  `img` varchar(5555) NOT NULL,
+  `enum` enum('sub_sub_menu') NOT NULL,
+  `sort` int(11) NOT NULL,
+  `status` enum('0','1') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sub_sub_menu`
+--
+
+INSERT INTO `sub_sub_menu` (`id`, `menu`, `sub_menu`, `sub_sub_menu`, `link`, `text`, `Products_name`, `ban_img`, `img`, `enum`, `sort`, `status`) VALUES
+(3, '1', '8', 'product 1.1', 'product', '', '', '', '', 'sub_sub_menu', 1, '1'),
+(4, '1', '8', 'product 1.2', 'product', '', '', '', '', 'sub_sub_menu', 2, '1'),
+(5, '1', '8', 'product 1.3', 'product', '', '', '', '', 'sub_sub_menu', 3, '1'),
+(6, '1', '9', 'product 2.1', 'product', '', '', '', '', 'sub_sub_menu', 1, '1'),
+(7, '1', '9', 'product 2.2', 'product', '', '', '', '', 'sub_sub_menu', 1, '1'),
+(8, '6', '10', 'Bath & Skin Care', 'product', '', '', '', '', 'sub_sub_menu', 1, '1'),
+(9, '6', '10', 'INFANT & BABY FOOD', 'product', '', '', '', '', 'sub_sub_menu', 2, '1'),
+(10, '6', '10', 'BABY DIAPERS & WIPES', 'product', '', '', '', '', 'sub_sub_menu', 3, '1'),
+(11, '6', '10', 'NURSING & FEEDING', 'product', '', '', '', '', 'sub_sub_menu', 4, '1'),
+(12, '6', '11', 'ACNE CARE', 'product', '', '', '', '', 'sub_sub_menu', 1, '1'),
+(13, '6', '11', 'BODY & BATH', 'product', '', '', '', '', 'sub_sub_menu', 2, '1'),
+(14, '6', '11', 'FACEWASH & CLEANSER', 'product', '', '', '', '', 'sub_sub_menu', 3, '1'),
+(15, '6', '12', 'Hair Growth Supplements', 'product', '', '', '', '', 'sub_sub_menu', 1, '1'),
+(16, '6', '12', 'Hair Oil & Treatment', 'product', '', '', '', '', 'sub_sub_menu', 3, '1'),
+(17, '6', '13', 'Lubricants & Massage Gels', 'product', '', '', '', '', 'sub_sub_menu', 1, '1'),
+(18, '6', '13', 'Massagers & Vibrators', 'product', '', '', '', '', 'sub_sub_menu', 2, '1'),
+(19, '6', '13', 'Performance Enhancers', 'product', '', '', '', '', 'sub_sub_menu', 3, '1'),
+(20, '6', '15', 'Adult Diapers', 'product', '', '', '', '', 'sub_sub_menu', 1, '1'),
+(21, '6', '15', 'Bone & Joint Health', 'product', '', '', '', '', 'sub_sub_menu', 2, '1'),
+(22, '6', '15', 'Living & Safety Aids', 'product', '', '', '', '', 'sub_sub_menu', 3, '1'),
+(23, '6', '16', 'Feminine Hygiene', 'product', '', '', '', '', 'sub_sub_menu', 1, '1'),
+(24, '6', '16', 'Women Supplements', 'product', '', '', '', '', 'sub_sub_menu', 2, '1'),
+(25, '6', '16', 'Mother Care', 'product', '', '', '', '', 'sub_sub_menu', 3, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testimonials`
+--
+
+CREATE TABLE `testimonials` (
+  `id` int(11) NOT NULL,
+  `name` longtext NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `image` varchar(555) NOT NULL,
+  `msg` varchar(2000) NOT NULL,
+  `sort` int(11) NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `testimonials`
+--
+
+INSERT INTO `testimonials` (`id`, `name`, `email`, `image`, `msg`, `sort`, `status`) VALUES
+(4, 'JOHN DOE', 'www.john.com', 'images/testimonials/img_2017-12-08-08-23-15_5a2a3de394af8.png', '<p>Semper ac dolor vitae msan. Cras interdum hendreritnia Phasellus accumsan&nbsp;urna vitae molestie interdum.</p>\r\n\r\n<p>Nam sed placerat libero, non eleifend dolor.</p>\r\n', 1, 1),
+(5, 'JOHN DOE', 'www.john.com', 'images/testimonials/img_2017-12-08-08-23-15_5a2a3de394af8.png', '<p>Semper ac dolor vitae msan. Cras interdum hendreritnia Phasellus accumsan&nbsp;urna vitae molestie interdum.</p>\r\n\r\n<p>Nam sed placerat libero, non eleifend dolor.</p>\r\n', 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `type`
+--
+
+CREATE TABLE `type` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `sort` int(11) NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `upload_prescription`
+--
+
+CREATE TABLE `upload_prescription` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `u_id` int(11) NOT NULL,
+  `Img` text NOT NULL,
+  `name` text NOT NULL,
+  `upload_date` date NOT NULL,
+  `status` enum('0','1') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `upload_prescription`
+--
+
+INSERT INTO `upload_prescription` (`id`, `email`, `u_id`, `Img`, `name`, `upload_date`, `status`) VALUES
+(1, 'ayush@thewebtycoons.com', 1, 'images/UploadPrescription/9811881710_2018-03-17-13-10-51.jpeg', 'prescription 4', '2018-03-17', '1'),
+(3, 'ayush@thewebtycoons.com', 1, 'images/UploadPrescription/9811881710_2018-03-17-17-23-03.jpeg', 'prescription 3', '2018-03-17', '0'),
+(4, 'ayush@thewebtycoons.com', 1, 'images/UploadPrescription/9811881710_2018-03-19-11-56-22.jpeg', 'prescription 12', '2018-03-19', '0'),
+(5, 'ayush@thewebtycoons.com', 1, 'images/UploadPrescription/9811881710_2018-03-19-12-15-40.jpeg', 'prescription 2', '2018-03-19', '1'),
+(6, 'ayush@thewebtycoons.com', 1, 'images/UploadPrescription/9811881710_2018-03-19-12-16-01.jpeg', 'prescription 3', '2018-03-19', '1'),
+(7, 'ayush@thewebtycoons.com', 1, 'images/UploadPrescription/9811881710_2018-03-19-13-40-11.jpeg', 'prescription 1', '2018-03-19', '1'),
+(8, 'ayush@thewebtycoons.com', 1, 'images/UploadPrescription/9811881710_2018-03-19-13-45-02.jpeg', 'prescription 4', '2018-03-19', '0'),
+(9, 'info@thewebtycoons.com', 1, 'images/UploadPrescription/9350262307_2018-06-05-15-23-31.jpeg', 'Prescription05-06-18', '2018-06-05', '1'),
+(10, 'info@thewebtycoons.com', 1, 'images/UploadPrescription/9350262307_2018-06-05-15-59-48.jpeg', 'Prescription05-06-18', '2018-06-05', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `fix` varchar(255) NOT NULL,
+  `prefix` int(11) NOT NULL,
+  `post` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `fname` varchar(255) NOT NULL,
+  `lname` varchar(255) NOT NULL,
+  `email` text NOT NULL,
+  `phone` bigint(20) NOT NULL,
+  `address` text NOT NULL,
+  `pass` text NOT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `gender` varchar(255) NOT NULL,
+  `age` int(11) NOT NULL,
+  `city` varchar(255) NOT NULL,
+  `state` varchar(255) NOT NULL,
+  `address_id` int(11) NOT NULL,
+  `status` enum('0','1') NOT NULL,
+  `date` datetime NOT NULL,
+  `approveDate` datetime NOT NULL,
+  `pharmacist_products` text,
+  `productsstatus` enum('0','1') NOT NULL,
+  `remember_token` varchar(255) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `editDate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `fix`, `prefix`, `post`, `title`, `fname`, `lname`, `email`, `phone`, `address`, `pass`, `password`, `gender`, `age`, `city`, `state`, `address_id`, `status`, `date`, `approveDate`, `pharmacist_products`, `productsstatus`, `remember_token`, `updated_at`, `editDate`) VALUES
+(1, 'TDUID-', 6022018, 1, 'Mr.', 'ayush', 'g', 'ayush@thewebtycoons.com', 9811881711, '', 'Ayush.@1234', 'Ayush.@1234', 'Male', 0, '', '', 1, '1', '2018-02-12 00:00:00', '2018-02-12 00:00:00', NULL, '0', 'A1GDHTecEWX5zeKWgp2DhlylisHJDGUt1MMRqYYXFbnb4Y3WEaglTWBiTlIj', '2018-06-20 17:50:17', '0000-00-00'),
+(9, 'TDUID-', 28032018, 2, 'Mr.', 'Ayush', 'test', 'ayush1@thewebtycoons.com', 7042057640, '', '123456@aA', '123456@aA', 'Male', 33, '', '', 16, '1', '2018-03-28 04:19:12', '2018-03-28 04:19:12', NULL, '0', NULL, NULL, '0000-00-00'),
+(10, 'PID-', 27032018, 2, 'Mr.', 'Ayush', 'test', 'manish@thewebtycoons.com', 70, '', '123', '123', 'Male', 8, '', '', 14, '1', '2018-03-27 08:30:58', '2018-03-27 08:30:58', '@1@,@18@', '1', NULL, NULL, '2018-03-28'),
+(12, 'MID-', 30032018, 1, 'Mr.', 'tieup', 'test', 'tieup@thewebtycoons.com', 12, '', '', NULL, '', 0, '', '', 0, '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '@16@,@58@,@9@', '1', NULL, NULL, '0000-00-00'),
+(13, 'TDUID-', 19042018, 1, 'Mr.', 'Manish', 'Kumar', 'manish.s@thewebtycoons.com', 9136859293, '', 'Manish.s@1', 'Manish.s@1', 'Male', 25, '', '', 17, '1', '2018-04-19 08:44:30', '2018-04-19 08:44:30', NULL, '0', NULL, NULL, '0000-00-00'),
+(14, 'TDUID-', 28042018, 1, 'Mrs.', 'Renu', 'kumari', 'renu@thewebtycoons.com', 8826017796, '', 'Renu@1234', 'Renu@1234', 'Female', 0, '', '', 18, '1', '2018-04-28 02:37:12', '2018-04-28 02:37:12', NULL, '0', NULL, NULL, '0000-00-00'),
+(15, 'TDUID-', 4062018, 1, 'Mrs.', 'Shruti', 'Aggarwal', 'info@thewebtycoons.com', 9350262307, '', 'Hello@123', 'Hello@123', 'Female', 22, '', '', 19, '1', '2018-06-04 07:14:16', '2018-06-04 07:14:16', NULL, '0', NULL, NULL, '0000-00-00'),
+(16, 'PID-', 4062018, 1, 'Mr.', 'Dheeraj', 'Aggarwal', 'dheeraj@thewebtycoons.com', 9350262307, '', 'Hello@123', NULL, 'Male', 35, '', '', 20, '1', '2018-06-04 07:25:08', '2018-06-04 07:25:08', NULL, '0', NULL, NULL, '0000-00-00'),
+(17, 'TDUID-', 8062018, 1, 'Mr.', 'fname', 'lname', 'makkarudit@gmail.com', 8826225077, '', 'K!llmong0', NULL, 'Male', -55, '', '', 22, '1', '2018-06-07 13:45:57', '2018-06-07 13:45:57', NULL, '0', NULL, NULL, '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wishlist`
+--
+
+CREATE TABLE `wishlist` (
+  `id` int(11) NOT NULL,
+  `p_id` varchar(255) NOT NULL,
+  `email` varchar(555) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `wishlist`
+--
+
+INSERT INTO `wishlist` (`id`, `p_id`, `email`, `date`) VALUES
+(1, '1', 'ayush@thewebtycoons.com', '2018-02-12'),
+(2, '2', 'ayush@thewebtycoons.com', '2018-02-12'),
+(3, '3', 'ayush@thewebtycoons.com', '2018-02-12'),
+(4, '6', 'ayush@thewebtycoons.com', '2018-02-12'),
+(5, '4', 'ayush@thewebtycoons.com', '2018-02-12'),
+(6, '5', 'ayush@thewebtycoons.com', '2018-02-12'),
+(7, '8', 'ayush@thewebtycoons.com', '2018-02-12'),
+(8, '9', 'ayush@thewebtycoons.com', '2018-02-19'),
+(9, '11', 'ayush@thewebtycoons.com', '2018-02-19'),
+(10, '16', 'ayush@thewebtycoons.com', '2018-02-21'),
+(11, '20', 'ayush@thewebtycoons.com', '2018-03-19'),
+(12, '18', 'ayush@thewebtycoons.com', '2018-03-19');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `address`
+--
+ALTER TABLE `address`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `add_our_services`
+--
+ALTER TABLE `add_our_services`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `admin_login`
+--
+ALTER TABLE `admin_login`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`,`email`);
+
+--
+-- Indexes for table `admin_name`
+--
+ALTER TABLE `admin_name`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `afterslider_view`
+--
+ALTER TABLE `afterslider_view`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `approve`
+--
+ALTER TABLE `approve`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `basic_details`
+--
+ALTER TABLE `basic_details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `blog`
+--
+ALTER TABLE `blog`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `blog_id`
+--
+ALTER TABLE `blog_id`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cms`
+--
+ALTER TABLE `cms`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `company_name`
+--
+ALTER TABLE `company_name`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `filter_age`
+--
+ALTER TABLE `filter_age`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `filter_brand`
+--
+ALTER TABLE `filter_brand`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `filter_discount`
+--
+ALTER TABLE `filter_discount`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `filter_form`
+--
+ALTER TABLE `filter_form`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `filter_gender`
+--
+ALTER TABLE `filter_gender`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `filter_uses`
+--
+ALTER TABLE `filter_uses`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `is_subscribed`
+--
+ALTER TABLE `is_subscribed`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `loyality_points`
+--
+ALTER TABLE `loyality_points`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `menu`
+--
+ALTER TABLE `menu`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `order_address`
+--
+ALTER TABLE `order_address`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `order_confirm`
+--
+ALTER TABLE `order_confirm`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `order_details`
+--
+ALTER TABLE `order_details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `packing`
+--
+ALTER TABLE `packing`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pharmacist`
+--
+ALTER TABLE `pharmacist`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pharmacist_products`
+--
+ALTER TABLE `pharmacist_products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pincodes`
+--
+ALTER TABLE `pincodes`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `number` (`number`);
+
+--
+-- Indexes for table `posts`
+--
+ALTER TABLE `posts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `price`
+--
+ALTER TABLE `price`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `products_added`
+--
+ALTER TABLE `products_added`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `room`
+--
+ALTER TABLE `room`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `room_img`
+--
+ALTER TABLE `room_img`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `slider`
+--
+ALTER TABLE `slider`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `social_links`
+--
+ALTER TABLE `social_links`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `solt`
+--
+ALTER TABLE `solt`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sub_menu`
+--
+ALTER TABLE `sub_menu`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sub_sub_menu`
+--
+ALTER TABLE `sub_sub_menu`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `type`
+--
+ALTER TABLE `type`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `upload_prescription`
+--
+ALTER TABLE `upload_prescription`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wishlist`
+--
+ALTER TABLE `wishlist`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `address`
+--
+ALTER TABLE `address`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT for table `add_our_services`
+--
+ALTER TABLE `add_our_services`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT for table `admin_login`
+--
+ALTER TABLE `admin_login`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `afterslider_view`
+--
+ALTER TABLE `afterslider_view`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `approve`
+--
+ALTER TABLE `approve`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `basic_details`
+--
+ALTER TABLE `basic_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `blog`
+--
+ALTER TABLE `blog`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `blog_id`
+--
+ALTER TABLE `blog_id`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `cms`
+--
+ALTER TABLE `cms`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `company_name`
+--
+ALTER TABLE `company_name`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=344;
+
+--
+-- AUTO_INCREMENT for table `filter_age`
+--
+ALTER TABLE `filter_age`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `filter_brand`
+--
+ALTER TABLE `filter_brand`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
+
+--
+-- AUTO_INCREMENT for table `filter_discount`
+--
+ALTER TABLE `filter_discount`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `filter_form`
+--
+ALTER TABLE `filter_form`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `filter_gender`
+--
+ALTER TABLE `filter_gender`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `filter_uses`
+--
+ALTER TABLE `filter_uses`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `is_subscribed`
+--
+ALTER TABLE `is_subscribed`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `menu`
+--
+ALTER TABLE `menu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `order_address`
+--
+ALTER TABLE `order_address`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+
+--
+-- AUTO_INCREMENT for table `order_confirm`
+--
+ALTER TABLE `order_confirm`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+
+--
+-- AUTO_INCREMENT for table `order_details`
+--
+ALTER TABLE `order_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+
+--
+-- AUTO_INCREMENT for table `packing`
+--
+ALTER TABLE `packing`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `pharmacist`
+--
+ALTER TABLE `pharmacist`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `pharmacist_products`
+--
+ALTER TABLE `pharmacist_products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pincodes`
+--
+ALTER TABLE `pincodes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `posts`
+--
+ALTER TABLE `posts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `price`
+--
+ALTER TABLE `price`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+
+--
+-- AUTO_INCREMENT for table `products_added`
+--
+ALTER TABLE `products_added`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
+
+--
+-- AUTO_INCREMENT for table `room`
+--
+ALTER TABLE `room`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `room_img`
+--
+ALTER TABLE `room_img`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT for table `slider`
+--
+ALTER TABLE `slider`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `social_links`
+--
+ALTER TABLE `social_links`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `solt`
+--
+ALTER TABLE `solt`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `sub_menu`
+--
+ALTER TABLE `sub_menu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `sub_sub_menu`
+--
+ALTER TABLE `sub_sub_menu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `type`
+--
+ALTER TABLE `type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `upload_prescription`
+--
+ALTER TABLE `upload_prescription`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `wishlist`
+--
+ALTER TABLE `wishlist`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

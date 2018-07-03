@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Login Page */
+
+.msg_box{
+	width:360px;
+	margin:10px auto 0 auto;
+	background:#3d9970;
+	border-radius:4px;
+	font-family: 'Source Sans Pro', sans-serif;
+-webkit-font-smoothing: antialiased;
+	}
+ .pad{
+	 padding:5px;
+	 color:#FFF;
+	 text-align:center;
+	
+	 }

@@ -1,0 +1,133 @@
+		.orders_table .ship_col,
+		.orders_table .product_action_col{ width: 175px; }
+
+		.orders_table .order_number_col,
+		.order_table th{ width: 141px; }
+		.table_wrap{
+			overflow: hidden;
+			border: 1px solid #eaeaea;	
+			border-radius: 3px;
+		}
+
+		.table_wrap:not(:last-child){ border-radius: 3px 3px 0 0; }
+
+		.top_box + .table_wrap:last-child{ border-radius: 0 0 3px 3px; }
+
+		.top_box + .table_wrap:not(:last-child){ border-radius: 0px; }
+
+		table{
+			width: 100%;
+			table-layout: fixed;
+		}
+
+		table th,
+		table td{
+			border: 1px solid #eaeaea;
+			padding: 14px 19px;
+		}
+
+		table td{ background: #fff; }
+
+		table th{
+			font-weight: 600;
+			line-height: 18px;
+			background: #f8f8f8;
+		}
+
+		table th:first-child,
+		table td:first-child{ border-left-width: 0px; }
+
+		table th:last-child,
+		table td:last-child{ border-right-width:0px; }
+
+		table > *:first-child > tr:first-child th,
+		table > *:first-child > tr:first-child td{ border-top: none; }
+
+		table > *:last-child > tr:last-child th,
+		table > *:last-child > tr:last-child td{ border-bottom-width: 0px; }
+
+		tfoot{ 
+			font-size: 16px;
+			font-weight: 600;
+		}
+
+		table .product_title{
+			font-size: 16px;
+			display: inline-block;
+			margin-bottom: 6px;
+		}
+
+		th.product_image_col, .row_title_col{ width: 132px; }
+		td.product_image_col{ text-align: center; }
+		.product_title_col{ width: 35.35%; }
+		.product_qty_col{ width: 130px; }
+		.product_actions_col{ width: 105px; }
+		.product_price_col{ width: 105px; }
+
+		.sc_product_info{
+			font-size: 13px;
+			line-height: 16px;
+		}
+
+		.total,
+		.subtotal{
+			font-size: 16px;
+			font-weight: 600;
+		}
+
+		.total{ color: #032c58; }
+
+		.grandtotal{
+			font-size: 22px;
+			color: #032c58;
+		}
+
+		.zebra tr:nth-child(2n) td{ background: #f8f8f8; }
+
+		.single_link_wrap{ margin-top: 10px; }
+
+		.edit_product{ margin-right: 2px; }
+
+		/* order review table */
+
+		.order_review .product_title_col{ width: 61.40%; }
+		.order_review .product_sku_col,
+		.order_review .product_qty_col,
+		.order_review .product_price_col{ width: 90px; }
+		.order_review .product_total_col{ width: 150px; }
+
+		.order_review tbody td{ height: 120px; }
+
+		.order_review tfoot { font-size: inherit; }
+
+		/* wishlist table */
+
+		.wishlist_table s{ display: block; }
+
+		.order_review tbody td,
+		.orders_table td,
+		.wishlist_table td,
+		.shopping_cart_table td{
+			padding-top: 19px;
+			padding-bottom: 19px;
+		}
+
+		/* orders table */
+.on_the_sides {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.top_box {
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+}
+.top_box, .bottom_box {
+    padding: 15px 19px;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
